@@ -43,7 +43,7 @@ services:
       - kafka
     environment:
       BROKERS: "kafkanetworkfailuretests_kafka_1:9092,kafkanetworkfailuretests_kafka_2:9092,kafkanetworkfailuretests_kafka_3:9092"
-    command: sh -c "echo $$(date) Starting librdkafka consumer && kafkacat -u -C -b $$BROKERS -J -o beginning -G 123 test-topic"
+    command: sh -c "echo $$(date) Starting librdkafka consumer && kafkacat -u -C -b $$BROKERS -J -o beginning -X socket.keepalive.enable=true -G 123 test-topic"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
@@ -65,7 +65,7 @@ services:
       - kafka
     environment:
       BROKERS: "kafkanetworkfailuretests_kafka_1:9092,kafkanetworkfailuretests_kafka_2:9092,kafkanetworkfailuretests_kafka_3:9092"
-    command: sh -c "echo $$(date) Starting librdkafka producer && while sleep .5; do date >&1 ; done | kafkacat -u -P -T -b $$BROKERS -t test-topic"
+    command: sh -c "echo $$(date) Starting librdkafka producer && while sleep .5; do date >&1 ; done | kafkacat -u -P -T -b $$BROKERS -X socket.keepalive.enable=true -t test-topic"
       # --request-timeout-ms 5000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
