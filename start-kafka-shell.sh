@@ -1,2 +1,7 @@
 #!/bin/bash
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -e HOST_IP=$1 -e ZK=$2 -i -t wurstmeister/kafka /bin/bash
+DOCKER_CMD="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock --net=kafkanetworkfailuretests_default -e BROKERS=kafkanetworkfailuretests_kafka_1:9092,kafkanetworkfailuretests_kafka_2:9092,kafkanetworkfailuretests_kafka_3:9092 -e ZK=kafkanetworkfailuretests_zookeeper_1:2181 -i -t wurstmeister/kafka"
+if [[ $# == 0 ]]; then
+  $DOCKER_CMD /bin/bash
+else
+  $DOCKER_CMD /bin/bash -c "$*"
+fi
