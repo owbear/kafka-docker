@@ -68,7 +68,7 @@ def do_test_producing_to_lost_leader(producer, consumer):
     kafka_id_leader, docker_id_leader = broker_node('leader')
     kafka_id_isr, docker_id_isr = broker_node('isr')
     log_in_utc("# Kafka cluster started, topic {} has {} ({}) as leader and {} ({}) as in sync replica".format(
-        TEST_TOPIC, kafka_id_isr, docker_id_leader, kafka_id_isr, docker_id_isr))
+        TEST_TOPIC, kafka_id_leader, docker_id_leader, kafka_id_isr, docker_id_isr))
 
     log_in_utc("# Start a producer and let it run for a while")
     docker_compose("up -d --scale kafka=3 kafka %s" % producer)
