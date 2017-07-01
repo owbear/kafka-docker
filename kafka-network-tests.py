@@ -1,4 +1,3 @@
-#!python3
 import json
 import re
 from subprocess import check_call, check_output, Popen, PIPE

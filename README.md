@@ -14,6 +14,7 @@ A suite of tests of kafka in failing network. Based on [https://github.com/wurst
 
 - run all tests: ```py.test-3 -s kafka-network-tests.py```
 - run individual tests: ```py.test-3 -s kafka-network-tests.py -k test_producing_to_lost_leader_using_librdkafka_producer```
+- run individual tests: ```py.test-3 -s kafka-network-tests.py -k test_producing_to_lost_leader_using_java_producer```
 
 ## Sample results
 
@@ -124,7 +125,7 @@ producer_librdkafka_1  | Thu Jun 29 12:33:52 UTC 2017
 PASSED
 ```
 
-The second test shows that while the producer produced values between ```12:37:33``` and ```12:37:54```, theres a gap between ```12:37:41`` and ```12:37:50``` where no values was stored in the log after the network was taken down at ```12:37:42```:
+The second test shows that while the producer produced values between ```12:37:33``` and ```12:37:54```, theres a gap between ```12:37:41``` and ```12:37:50``` where no values was stored in the log after the network was taken down at ```12:37:42```:
 
 ```
 kafka-network-tests.py:111: test_producing_to_lost_leader_using_java_producer
