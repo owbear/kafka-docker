@@ -25,7 +25,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   consumer_java:
-    image: wurstmeister/kafka
+    image: wurstmeister/kafka:0.10.2.1
     depends_on:
       - kafka
     environment:
@@ -48,14 +48,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   producer_java:
-    image: wurstmeister/kafka
+    image: wurstmeister/kafka:0.10.2.1
     depends_on:
       - kafka
     environment:
       BROKERS: "kafkanetworkfailuretests_kafka_1:9092,kafkanetworkfailuretests_kafka_2:9092,kafkanetworkfailuretests_kafka_3:9092"
     command: sh -c "echo $$(date) Starting java producer && while sleep .5; do date >&2 ; date >&1 ; done | kafka-console-producer.sh --broker-list $$BROKERS --topic test-topic --request-required-acks all"
       # --request-timeout-ms 5000
-    #command: sh -c "sed -i.bak 's/WARN/DEBUG/' /opt/kafka/config/tools-log4j.properties && kafka-verifiable-producer.sh --topic test-topic --broker-list $$BROKERS --throughput 2 --acks 1"
+    #command: sh -c "kafka-verifiable-producer.sh --topic test-topic --broker-list $$BROKERS --throughput 2 --acks -1"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 

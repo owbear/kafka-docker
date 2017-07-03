@@ -13,8 +13,8 @@ A suite of tests of kafka in failing network. Based on [https://github.com/wurst
 ## Running the tests
 
 - run all tests: ```py.test-3 -s kafka-network-tests.py```
-- run individual tests: ```py.test-3 -s kafka-network-tests.py -k test_producing_to_lost_leader_using_librdkafka_producer```
-- run individual tests: ```py.test-3 -s kafka-network-tests.py -k test_producing_to_lost_leader_using_java_producer```
+- run individual tests: ```py.test-3 -s kafka-network-tests.py -k test_producing_to_lost_leader_using_librdkafka_producer_and_ifdown```
+- run individual tests: ```py.test-3 -s kafka-network-tests.py -k test_producing_to_lost_leader_using_java_producer_and_ifdown```
 
 ## Sample results
 
