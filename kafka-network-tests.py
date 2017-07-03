@@ -53,7 +53,7 @@ def docker_compose(cmd):
     check_call(["docker-compose", "--project-name", "kafkanetworkfailuretests"] + cmd.split())
 
 
-def do_test_producing_to_lost_leader(producer, consumer):
+def do_test_producing_to_lost_leader(producer, consumer, take_down):
     """ Start a cluster, let the producer produce for a while, bring down the cluster and read the complete backlog
     to see if anything was missed """
 
@@ -67,19 +67,19 @@ def do_test_producing_to_lost_leader(producer, consumer):
 
     kafka_id_leader, docker_id_leader = broker_node('leader')
     kafka_id_isr, docker_id_isr = broker_node('isr')
-    log_in_utc("# Kafka cluster started, topic {} has {} ({}) as leader and {} ({}) as in sync replica".format(
-        TEST_TOPIC, kafka_id_leader, docker_id_leader, kafka_id_isr, docker_id_isr))
+    kafka_id_controller = zk_query("/controller")['brokerid']
+    log_in_utc("# Kafka cluster with controller {} started,"
+               "topic {} has {} ({}) as leader and {} ({}) as in sync replica".format(
+                   kafka_id_controller, TEST_TOPIC, kafka_id_leader, docker_id_leader, kafka_id_isr, docker_id_isr))
 
     log_in_utc("# Start a producer and let it run for a while")
     docker_compose("up -d --scale kafka=3 kafka %s" % producer)
     time.sleep(10)
 
-    log_in_utc("$ Bring down eth0 on leader %d (docker id: %s)" % (kafka_id_leader, docker_id_leader))
-    # docker network disconnect --force kafkanetworkfailuretests_default {docker_id_leader}
-    check_call("docker exec --privileged -t {} ifconfig eth0 down".format(docker_id_leader).split())
+    take_down(docker_id_leader)
 
     log_in_utc("# Sleep for a while with the leader disconnected before checking what the producer has produced")
-    time.sleep(10)
+    time.sleep(60)
 
     log_in_utc("# Stop the producer")
     docker_compose("stop --timeout 1 %s" % producer)
@@ -94,16 +94,48 @@ def do_test_producing_to_lost_leader(producer, consumer):
     docker_compose("stop %s" % consumer)
 
     log_in_utc("# Logs of what the producer produced and consumer consumed")
-    docker_compose("logs %s" % consumer)
-    docker_compose("logs %s" % producer)
+    docker_compose("logs --timestamps %s" % consumer)
+    docker_compose("logs --timestamps %s" % producer)
+
+
+def take_down_ifdown(docker_id):
+    log_in_utc("# Bring down eth0 on {}".format(docker_id))
+    check_call("docker exec --privileged -t {} ifconfig eth0 down".format(docker_id).split())
+
+
+def take_down_disconnect(docker_id):
+    log_in_utc("# Disconnect {} from network".format(docker_id))
+    Client.from_env().disconnect_container_from_network(docker_id, "kafkanetworkfailuretests_default", force=True)
+
+
+def take_down_kill(docker_id):
+    log_in_utc("# Kill -9 {}".format(docker_id))
+    Client.from_env().remove_container(docker_id, force=True)
+
 
 #######
 # Tests
 
 
-def test_producing_to_lost_leader_using_librdkafka_producer():
-    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java")
+def test_producing_to_lost_leader_using_librdkafka_producer_and_ifdown():
+    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_ifdown)
 
 
-def test_producing_to_lost_leader_using_java_producer():
-    do_test_producing_to_lost_leader("producer_java", "consumer_java")
+def test_producing_to_lost_leader_using_librdkafka_producer_and_disconnect():
+    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_disconnect)
+
+
+def test_producing_to_lost_leader_using_librdkafka_producer_and_kill():
+    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_kill)
+
+
+def test_producing_to_lost_leader_using_java_producer_and_ifdown():
+    do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_ifdown)
+
+
+def test_producing_to_lost_leader_using_java_producer_and_disconnect():
+    do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_disconnect)
+
+
+def test_producing_to_lost_leader_using_java_producer_and_kill():
+    do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_kill)
