@@ -9,32 +9,36 @@ ZK_BIN_PATH = "/tmp/kafka_2.12-0.10.2.1/bin/kafka-run-class.sh"
 TEST_TOPIC = "test-topic"
 
 
-def zk_query(path):
+def zk_query(path, fail_on_error=False):
     zk_cmd = [ZK_BIN_PATH, "kafka.tools.ZooKeeperMainWrapper", "get", path]
     output, errors = Popen(zk_cmd, universal_newlines=True, stdout=PIPE, stderr=PIPE).communicate()
     for line in output.split():
         match = re.match("^({.+})$", line)
         if match:
             return json.loads(match.group(0))
-    raise RuntimeError("Command '{}' failed with: {}".format(zk_cmd, errors))
+    if fail_on_error:
+        raise RuntimeError("Command '{}' failed with: {}".format(zk_cmd, errors))
 
 
 def broker_node(broker_type):
-    state = zk_query("/brokers/topics/%s/partitions/0/state" % TEST_TOPIC)
-
-    if broker_type == 'leader':
-        broker = state['leader']
+    if broker_type == 'controller':
+        broker = zk_query("/controller")['brokerid']
     else:
-        assert len(state['isr']) > 1  # We need at least one follower isr
-        broker = [isr for isr in state['isr'] if isr != state['leader']][0]  # Pick one
+        state = zk_query("/brokers/topics/%s/partitions/0/state" % TEST_TOPIC)
+
+        if broker_type == 'leader':
+            broker = state['leader']
+        else:
+            assert len(state['isr']) > 1  # We need at least one follower isr
+            broker = [isr for isr in state['isr'] if isr != state['leader']][0]  # Pick one
 
     containers = Client.from_env().containers(filters={'label': 'com.docker.compose.project'})
     broker_port = zk_query("/brokers/ids/%d" % broker)['port']
     for c in containers:
         if not c['Ports'] or 'PublicPort' not in c['Ports'][0]:
             pass  # Skip zookeeper, multiple ports, not all of them public
-    broker_id = [c['Id'] for c in containers if c['Ports'] and c['Ports'][0].get('PublicPort') == broker_port][0]
-    return broker, broker_id
+    docker_id = [c['Id'] for c in containers if c['Ports'] and c['Ports'][0].get('PublicPort') == broker_port][0]
+    return broker, docker_id[:12]
 
 
 def remove_all_docker_containers():
@@ -63,14 +67,21 @@ def do_test_producing_to_lost_leader(producer, consumer, take_down):
     log_in_utc("# Start zookeeper and 3 kafka instances")
     docker_compose("up -d --scale kafka=3 kafka")
     log_in_utc("# Wait for the cluster to start")
-    time.sleep(20)
+    for _ in range(7):
+        time.sleep(2)
+        state = zk_query("/brokers/topics/%s/partitions/0/state" % TEST_TOPIC, fail_on_error=False)
+        if state and len(state.get('isr', [])) > 1:
+            log_in_utc(state)
+            break
+
+    kafka_id_controller, docker_id_controller = broker_node('controller')
+    log_in_utc("# Kafka cluster has controller {} ({})".format(kafka_id_controller, docker_id_controller))
 
     kafka_id_leader, docker_id_leader = broker_node('leader')
     kafka_id_isr, docker_id_isr = broker_node('isr')
-    kafka_id_controller = zk_query("/controller")['brokerid']
-    log_in_utc("# Kafka cluster with controller {} started,"
-               "topic {} has {} ({}) as leader and {} ({}) as in sync replica".format(
-                   kafka_id_controller, TEST_TOPIC, kafka_id_leader, docker_id_leader, kafka_id_isr, docker_id_isr))
+    log_in_utc("# Topic {} has {} ({}) as leader and {} ({}) as in sync replica".format(
+               TEST_TOPIC, kafka_id_leader, docker_id_leader, kafka_id_isr, docker_id_isr))
+    assert kafka_id_leader != kafka_id_isr
 
     log_in_utc("# Start a producer and let it run for a while")
     docker_compose("up -d --scale kafka=3 kafka %s" % producer)
@@ -79,7 +90,9 @@ def do_test_producing_to_lost_leader(producer, consumer, take_down):
     take_down(docker_id_leader)
 
     log_in_utc("# Sleep for a while with the leader disconnected before checking what the producer has produced")
-    time.sleep(60)
+    for _ in range(20):
+        log_in_utc(zk_query("/brokers/topics/%s/partitions/0/state" % TEST_TOPIC))
+        time.sleep(2)
 
     log_in_utc("# Stop the producer")
     docker_compose("stop --timeout 1 %s" % producer)
@@ -96,6 +109,7 @@ def do_test_producing_to_lost_leader(producer, consumer, take_down):
     log_in_utc("# Logs of what the producer produced and consumer consumed")
     docker_compose("logs --timestamps %s" % consumer)
     docker_compose("logs --timestamps %s" % producer)
+    check_call(["docker", "logs", docker_id_isr])
 
 
 def take_down_ifdown(docker_id):
