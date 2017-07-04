@@ -5,12 +5,12 @@ import time
 from docker import Client
 
 
-ZK_BIN_PATH = "/tmp/kafka_2.12-0.10.2.1/bin/kafka-run-class.sh"
+RUNCLASS_PATH = "/tmp/kafka_2.12-0.10.2.1/bin/kafka-run-class.sh"
 TEST_TOPIC = "test-topic"
 
 
 def zk_query(path, fail_on_error=False):
-    zk_cmd = [ZK_BIN_PATH, "kafka.tools.ZooKeeperMainWrapper", "get", path]
+    zk_cmd = [RUNCLASS_PATH, "kafka.tools.ZooKeeperMainWrapper", "get", path]
     output, errors = Popen(zk_cmd, universal_newlines=True, stdout=PIPE, stderr=PIPE).communicate()
     for line in output.split():
         match = re.match("^({.+})$", line)
@@ -57,9 +57,22 @@ def docker_compose(cmd):
     check_call(["docker-compose", "--project-name", "kafkanetworkfailuretests"] + cmd.split())
 
 
+def change_isr(broker_ids):
+    import tempfile
+    with tempfile.NamedTemporaryFile() as f:
+        reassignment = '{"partitions":[{"topic":"%s", "partition":0, "replicas":%s}], "version":2 }' % (
+            TEST_TOPIC, broker_ids)
+        f.write(reassignment.encode())
+        f.flush()
+        log_in_utc("# Reassigning partitions using: " + reassignment)
+        reassign_cmd = "--zookeeper localhost:2181 --reassignment-json-file %s" % f.name
+        check_call([RUNCLASS_PATH, "kafka.admin.ReassignPartitionsCommand", "--execute"] + reassign_cmd.split())
+        check_call([RUNCLASS_PATH, "kafka.admin.ReassignPartitionsCommand", "--verify"] + reassign_cmd.split())
+
+
 def do_test_producing_to_lost_leader(producer, consumer, take_down):
-    """ Start a cluster, let the producer produce for a while, bring down the cluster and read the complete backlog
-    to see if anything was missed """
+    """ Start a cluster, let the producer produce for a while, bring down the topic leader and read the complete backlog
+    to see if the producer failed to produce data to the cluster for a prolonged time"""
 
     log_in_utc("# Remove all docker containers for a clean start")
     remove_all_docker_containers()
@@ -87,7 +100,10 @@ def do_test_producing_to_lost_leader(producer, consumer, take_down):
     docker_compose("up -d --scale kafka=3 kafka %s" % producer)
     time.sleep(10)
 
-    take_down(docker_id_leader)
+    if take_down:
+        take_down(docker_id_leader)
+    else:
+        change_isr([kafka_id_isr])
 
     log_in_utc("# Sleep for a while with the leader disconnected before checking what the producer has produced")
     for _ in range(20):
@@ -143,6 +159,10 @@ def test_producing_to_lost_leader_using_librdkafka_producer_and_kill():
     do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_kill)
 
 
+def test_producing_to_lost_leader_using_librdkafka_producer_and_change_isr():
+    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", None)
+
+
 def test_producing_to_lost_leader_using_java_producer_and_ifdown():
     do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_ifdown)
 
@@ -153,3 +173,7 @@ def test_producing_to_lost_leader_using_java_producer_and_disconnect():
 
 def test_producing_to_lost_leader_using_java_producer_and_kill():
     do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_kill)
+
+
+def test_producing_to_lost_leader_using_java_producer_and_change_isr():
+    do_test_producing_to_lost_leader("producer_java", "consumer_java", None)
