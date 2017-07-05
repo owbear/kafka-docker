@@ -4,6 +4,8 @@ services:
     image: wurstmeister/zookeeper
     ports:
       - "2181:2181"
+    volumes:
+      - ./zk_conf:/opt/zookeeper-3.4.9/conf
 
   kafka:
     image: wurstmeister/kafka:0.10.2.1
@@ -21,8 +23,12 @@ services:
       #KAFKA_LEADER_IMBALANCE_CHECK_INTERVAL_SECONDS: 5
       #KAFKA_REPLICA_SOCKET_TIMEOUT_MS: 1000
       #KAFKA_CONTROLLER_SOCKET_TIMEOUT_MS: 1000
+      KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS: 600
+      KAFKA_ZOOKEEPER_SESSION_TIMEOUT_MS: 600
+      KAFKA_GROUP_MIN_SESSION_TIMEOUT_MS: 1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./kafka_config/log4j.properties:/opt/kafka/config/log4j.properties
 
   consumer_java:
     image: wurstmeister/kafka:0.10.2.1
@@ -30,12 +36,13 @@ services:
       - kafka
     environment:
       BROKERS: "kafkanetworkfailuretests_kafka_1:9092,kafkanetworkfailuretests_kafka_2:9092,kafkanetworkfailuretests_kafka_3:9092"
-    command: sh -c "echo $$(date) Starting java consumer && kafka-console-consumer.sh --new-consumer --bootstrap-server $$BROKERS --topic test-topic --from-beginning | while read line ; do echo $${line} [received $$(date)]; done"
+    command: sh -c "sed -i.bak 's/WARN/DEBUG/' /opt/kafka/config/tools-log4j.properties && echo $$(date) Starting java consumer && kafka-console-consumer.sh --consumer.config /consumer.properties --enable-systest-events --new-consumer --bootstrap-server $$BROKERS --topic test-topic --from-beginning | while read line ; do echo $${line} [received $$(date)]; done"
     #--consumer-property enable.auto.commit=false
     #sed -i.bak 's/WARN/DEBUG/' /opt/kafka/config/tools-log4j.properties
     #command: sh -c "sed -i.bak 's/WARN/DEBUG/' /opt/kafka/config/tools-log4j.properties && kafka-verifiable-consumer.sh --topic test-topic --broker-list $$BROKERS --reset-policy latest --verbose --group-id 123 | while read line ; do echo $$(date) - $${line}; done"
     volumes:
      - /var/run/docker.sock:/var/run/docker.sock
+     - ./kafka_config/consumer.properties:/consumer.properties
 
   consumer_librdkafka:
     image: confluentinc/cp-kafkacat
@@ -53,7 +60,9 @@ services:
       - kafka
     environment:
       BROKERS: "kafkanetworkfailuretests_kafka_1:9092,kafkanetworkfailuretests_kafka_2:9092,kafkanetworkfailuretests_kafka_3:9092"
-    command: sh -c "echo $$(date) Starting java producer && while sleep .5; do date >&2 ; date >&1 ; done | kafka-console-producer.sh --broker-list $$BROKERS --topic test-topic --request-required-acks all"
+      KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS: 600
+      KAFKA_ZOOKEEPER_SESSION_TIMEOUT_MS: 600
+    command: sh -c "sed -i.bak 's/WARN/DEBUG/' /opt/kafka/config/tools-log4j.properties && echo $$(date) Starting java producer && while sleep .5; do date >&2 ; date >&1 ; done | kafka-console-producer.sh --broker-list $$BROKERS --topic test-topic --request-required-acks all"
       # --request-timeout-ms 5000
     #command: sh -c "kafka-verifiable-producer.sh --topic test-topic --broker-list $$BROKERS --throughput 2 --acks -1"
     volumes:

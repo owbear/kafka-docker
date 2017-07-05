@@ -1,0 +1,228 @@
+============================= test session starts ==============================
+platform linux -- Python 3.4.3 -- pytest-2.5.1
+collected 1 items
+
+kafka-network-tests.py cca7c1a1b606
+9652bf347380
+6c2fe708fcd2
+9fa4cdd5e72d
+2c33b8539d18
+Attaching to 
+Attaching to kafkanetworkfailuretests_producer_java_1
+[36mproducer_java_1        |[0m 2017-07-03T14:54:56.013792865Z Mon Jul 3 14:54:56 UTC 2017 Starting java producer
+[36mproducer_java_1        |[0m 2017-07-03T14:54:56.515394560Z Mon Jul  3 14:54:56 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:54:57.016974398Z Mon Jul  3 14:54:57 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:54:57.519935856Z Mon Jul  3 14:54:57 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.024256918Z Mon Jul  3 14:54:58 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.340551091Z [2017-07-03 14:54:58,339] WARN Got error produce response with correlation id 5 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.455861662Z [2017-07-03 14:54:58,454] WARN Got error produce response with correlation id 7 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.530432723Z Mon Jul  3 14:54:58 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.566009815Z [2017-07-03 14:54:58,565] WARN Got error produce response with correlation id 9 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.688518299Z [2017-07-03 14:54:58,679] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.688688548Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.688932947Z [2017-07-03 14:54:58,688] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.688992458Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.690720351Z [2017-07-03 14:54:58,689] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.690871307Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.690897998Z [2017-07-03 14:54:58,689] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:58.690917597Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.035279370Z Mon Jul  3 14:54:59 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.541357436Z Mon Jul  3 14:54:59 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.546286434Z [2017-07-03 14:54:59,545] WARN Got error produce response with correlation id 13 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.654333778Z [2017-07-03 14:54:59,653] WARN Got error produce response with correlation id 15 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.764692949Z [2017-07-03 14:54:59,764] WARN Got error produce response with correlation id 17 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.876671487Z [2017-07-03 14:54:59,875] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.876754490Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.876955960Z [2017-07-03 14:54:59,876] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:54:59.877003385Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.049484583Z Mon Jul  3 14:55:00 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.557636312Z Mon Jul  3 14:55:00 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.562870505Z [2017-07-03 14:55:00,561] WARN Got error produce response with correlation id 21 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.667757626Z [2017-07-03 14:55:00,667] WARN Got error produce response with correlation id 23 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.780204318Z [2017-07-03 14:55:00,779] WARN Got error produce response with correlation id 25 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.897568073Z [2017-07-03 14:55:00,896] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.897661937Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.898162929Z [2017-07-03 14:55:00,897] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:00.898420873Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.068386045Z Mon Jul  3 14:55:01 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.567406557Z [2017-07-03 14:55:01,567] WARN Got error produce response with correlation id 29 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.575051052Z Mon Jul  3 14:55:01 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.683416899Z [2017-07-03 14:55:01,681] WARN Got error produce response with correlation id 31 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.785228797Z [2017-07-03 14:55:01,785] WARN Got error produce response with correlation id 33 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.896369974Z [2017-07-03 14:55:01,894] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.896444204Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.896460882Z [2017-07-03 14:55:01,895] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:01.896474167Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.078908802Z Mon Jul  3 14:55:02 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.582815364Z Mon Jul  3 14:55:02 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.589028923Z [2017-07-03 14:55:02,588] WARN Got error produce response with correlation id 37 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.696651455Z [2017-07-03 14:55:02,696] WARN Got error produce response with correlation id 39 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.803756467Z [2017-07-03 14:55:02,803] WARN Got error produce response with correlation id 41 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.916993544Z [2017-07-03 14:55:02,916] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.917086834Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.917330770Z [2017-07-03 14:55:02,916] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:02.917388846Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.088538587Z Mon Jul  3 14:55:03 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.593097834Z Mon Jul  3 14:55:03 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.598717124Z [2017-07-03 14:55:03,597] WARN Got error produce response with correlation id 45 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.705069139Z [2017-07-03 14:55:03,704] WARN Got error produce response with correlation id 47 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.815023571Z [2017-07-03 14:55:03,814] WARN Got error produce response with correlation id 49 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.925737796Z [2017-07-03 14:55:03,925] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.925825577Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.926133386Z [2017-07-03 14:55:03,925] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:03.926178346Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.103605367Z Mon Jul  3 14:55:04 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.613310627Z [2017-07-03 14:55:04,607] WARN Got error produce response with correlation id 53 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.613401003Z Mon Jul  3 14:55:04 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.713108283Z [2017-07-03 14:55:04,712] WARN Got error produce response with correlation id 55 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.822579267Z [2017-07-03 14:55:04,821] WARN Got error produce response with correlation id 57 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.932420051Z [2017-07-03 14:55:04,931] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.932461749Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.932662187Z [2017-07-03 14:55:04,932] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:04.932689318Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.119835503Z Mon Jul  3 14:55:05 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.619593805Z [2017-07-03 14:55:05,619] WARN Got error produce response with correlation id 61 on topic-partition test-topic-0, retrying (2 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.621890802Z Mon Jul  3 14:55:05 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.726574218Z [2017-07-03 14:55:05,725] WARN Got error produce response with correlation id 63 on topic-partition test-topic-0, retrying (1 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.829097847Z [2017-07-03 14:55:05,828] WARN Got error produce response with correlation id 65 on topic-partition test-topic-0, retrying (0 attempts left). Error: NOT_LEADER_FOR_PARTITION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.936690402Z [2017-07-03 14:55:05,936] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.936756030Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.936838061Z [2017-07-03 14:55:05,936] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:05.936852612Z org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+[36mproducer_java_1        |[0m 2017-07-03T14:55:06.127056385Z Mon Jul  3 14:55:06 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:06.631760253Z Mon Jul  3 14:55:06 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:07.141435790Z Mon Jul  3 14:55:07 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:07.648126640Z Mon Jul  3 14:55:07 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:08.156406807Z Mon Jul  3 14:55:08 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:08.654905899Z [2017-07-03 14:55:08,654] WARN Got error produce response with correlation id 70 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:08.656235437Z [2017-07-03 14:55:08,654] WARN Got error produce response with correlation id 69 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:08.667073966Z Mon Jul  3 14:55:08 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:09.175383971Z Mon Jul  3 14:55:09 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:09.681662715Z Mon Jul  3 14:55:09 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.187790761Z Mon Jul  3 14:55:10 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.693478778Z Mon Jul  3 14:55:10 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.698284222Z [2017-07-03 14:55:10,697] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.698357133Z org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1942 ms has passed since last attempt plus backoff time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.698407332Z [2017-07-03 14:55:10,698] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.698428755Z org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1942 ms has passed since last attempt plus backoff time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.699194112Z [2017-07-03 14:55:10,698] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.699234704Z org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1942 ms has passed since last attempt plus backoff time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.699581444Z [2017-07-03 14:55:10,699] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.699634437Z org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1942 ms has passed since last attempt plus backoff time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.700338986Z [2017-07-03 14:55:10,699] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.700373735Z org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2046 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.700791245Z [2017-07-03 14:55:10,700] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.700817162Z org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2046 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.701325367Z [2017-07-03 14:55:10,700] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.701355147Z org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2046 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.701822036Z [2017-07-03 14:55:10,701] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.701850132Z org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2046 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.702343717Z [2017-07-03 14:55:10,702] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.702373088Z org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2046 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.702844420Z [2017-07-03 14:55:10,702] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.702882653Z org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2046 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.703377118Z [2017-07-03 14:55:10,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:10.703406028Z org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2046 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:11.199773255Z Mon Jul  3 14:55:11 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:11.706020610Z Mon Jul  3 14:55:11 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:12.211626515Z Mon Jul  3 14:55:12 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:12.717130972Z Mon Jul  3 14:55:12 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.222913088Z Mon Jul  3 14:55:13 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.708012915Z [2017-07-03 14:55:13,706] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.708167929Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.708197470Z [2017-07-03 14:55:13,707] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.708217448Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.709281363Z [2017-07-03 14:55:13,707] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.709317641Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.709328873Z [2017-07-03 14:55:13,708] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.709340019Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.709350796Z [2017-07-03 14:55:13,708] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.709368135Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:13.727827108Z Mon Jul  3 14:55:13 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:14.233804581Z Mon Jul  3 14:55:14 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:14.737857142Z Mon Jul  3 14:55:14 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:15.241706724Z Mon Jul  3 14:55:15 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:15.747284598Z Mon Jul  3 14:55:15 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.236347060Z [2017-07-03 14:55:16,235] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.236434777Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.237087077Z [2017-07-03 14:55:16,236] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.237134756Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.237392464Z [2017-07-03 14:55:16,237] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.240214431Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.240416173Z [2017-07-03 14:55:16,237] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.240448018Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.240465012Z [2017-07-03 14:55:16,237] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.240482946Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.253287373Z Mon Jul  3 14:55:16 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:16.761771470Z Mon Jul  3 14:55:16 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:17.265845117Z Mon Jul  3 14:55:17 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:17.770210600Z Mon Jul  3 14:55:17 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.277182416Z Mon Jul  3 14:55:18 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.764069733Z [2017-07-03 14:55:18,762] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.764158995Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.764413536Z [2017-07-03 14:55:18,763] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.764584932Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.765051258Z [2017-07-03 14:55:18,764] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.765093229Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.768103503Z [2017-07-03 14:55:18,764] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.768168926Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.768192659Z [2017-07-03 14:55:18,765] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.768211378Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:18.781793299Z Mon Jul  3 14:55:18 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:19.289089625Z Mon Jul  3 14:55:19 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:19.794289838Z Mon Jul  3 14:55:19 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:20.299612876Z Mon Jul  3 14:55:20 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:20.805090156Z Mon Jul  3 14:55:20 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.289420542Z [2017-07-03 14:55:21,288] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.289488270Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290641562Z [2017-07-03 14:55:21,289] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290706306Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290728379Z [2017-07-03 14:55:21,289] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290745793Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290762917Z [2017-07-03 14:55:21,289] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290779767Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290796432Z [2017-07-03 14:55:21,289] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.290815600Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.310398678Z Mon Jul  3 14:55:21 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:21.816378649Z Mon Jul  3 14:55:21 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:22.321858200Z Mon Jul  3 14:55:22 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:22.827772990Z Mon Jul  3 14:55:22 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.333889861Z Mon Jul  3 14:55:23 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.818502849Z [2017-07-03 14:55:23,817] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.818566928Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.819435099Z [2017-07-03 14:55:23,818] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.819503627Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.820064390Z [2017-07-03 14:55:23,819] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.820099739Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.820465350Z [2017-07-03 14:55:23,820] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.820491132Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.820851545Z [2017-07-03 14:55:23,820] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.820959255Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:23.839651258Z Mon Jul  3 14:55:23 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:24.349531167Z Mon Jul  3 14:55:24 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:24.856206781Z Mon Jul  3 14:55:24 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:25.361654747Z Mon Jul  3 14:55:25 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:25.866981680Z Mon Jul  3 14:55:25 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.351536972Z [2017-07-03 14:55:26,346] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.351573782Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.351603502Z [2017-07-03 14:55:26,346] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.351608250Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.351836060Z [2017-07-03 14:55:26,346] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.351847326Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.352046611Z [2017-07-03 14:55:26,351] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.352057296Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.352188574Z [2017-07-03 14:55:26,352] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.352210815Z org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.371237991Z Mon Jul  3 14:55:26 UTC 2017
+[36mproducer_java_1        |[0m 2017-07-03T14:55:26.873180155Z Mon Jul  3 14:55:26 UTC 2017
+Mon Jul 03 14:54:25 UTC 2017: # Remove all docker containers for a clean start
+Mon Jul 03 14:54:27 UTC 2017: # Start zookeeper and 3 kafka instances
+Mon Jul 03 14:54:28 UTC 2017: # Wait for the cluster to start
+Mon Jul 03 14:54:55 UTC 2017: # Kafka cluster with controller 1001 started,topic test-topic has 1002 (1b4d46d5cb0a3f44f85a7b90bcce7c72757812950d9ad71659e59b4da21ae53d) as leader and 1003 (1b4d46d5cb0a3f44f85a7b90bcce7c72757812950d9ad71659e59b4da21ae53d) as in sync replica
+Mon Jul 03 14:54:55 UTC 2017: # Start a producer and let it run for a while
+Mon Jul 03 14:55:06 UTC 2017: # Bring down eth0 on 1b4d46d5cb0a3f44f85a7b90bcce7c72757812950d9ad71659e59b4da21ae53d
+Mon Jul 03 14:55:06 UTC 2017: # Sleep for a while with the leader disconnected before checking what the producer has produced
+Mon Jul 03 14:55:26 UTC 2017: # Logs of what the producer produced and consumer consumed
+.
+
+========================== 1 passed in 61.35 seconds ===========================

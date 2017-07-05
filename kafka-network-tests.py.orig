@@ -5,7 +5,7 @@ import time
 from docker import Client
 
 
-ZK_BIN_PATH = "/tmp/kafka_2.12-0.10.2.1/bin/kafka-run-class.sh"
+ZK_BIN_PATH = "/tmp/kafka_2.12-0.11.0.0/bin/kafka-run-class.sh"
 TEST_TOPIC = "test-topic"
 
 
@@ -74,24 +74,37 @@ def do_test_producing_to_lost_leader(producer, consumer, take_down):
 
     log_in_utc("# Start a producer and let it run for a while")
     docker_compose("up -d --scale kafka=3 kafka %s" % producer)
-
-    log_in_utc("# Start the consumer")
-    docker_compose("up -d --scale kafka=3 kafka %s" % consumer)
-
-    log_in_utc("# Wait for 3 minutes for the consumer to consume (it can take even longer)")
-
-    time.sleep(20)
+    time.sleep(10)
 
     take_down(docker_id_leader)
 
     log_in_utc("# Sleep for a while with the leader disconnected before checking what the producer has produced")
+<<<<<<< Updated upstream
     time.sleep(60)
 
     log_in_utc("# Stop the producer")
     docker_compose("stop --timeout 1 %s" % producer)
 
-    log_in_utc("# Stop the consumer")
-    docker_compose("stop %s" % consumer)
+    log_in_utc("# Start the consumer")
+    docker_compose("up -d --scale kafka=3 kafka %s" % consumer)
+
+    log_in_utc("# Wait for 3 minutes for the consumer to consume (it can take even longer)")
+    time.sleep(180)
+=======
+    time.sleep(20)
+>>>>>>> Stashed changes
+
+    # log_in_utc("# Stop the producer")
+    # docker_compose("stop --timeout 1 %s" % producer)
+    #
+    # log_in_utc("# Start the consumer")
+    # docker_compose("up -d --scale kafka=3 kafka %s" % consumer)
+    #
+    # log_in_utc("# Wait for 3 minutes for the consumer to consume (it can take even longer)")
+    # time.sleep(180)
+    #
+    # log_in_utc("# Stop the consumer")
+    # docker_compose("stop %s" % consumer)
 
     log_in_utc("# Logs of what the producer produced and consumer consumed")
     docker_compose("logs --timestamps %s" % consumer)
@@ -117,25 +130,30 @@ def take_down_kill(docker_id):
 # Tests
 
 
-# def test_producing_to_lost_leader_using_librdkafka_producer_and_ifdown():
-#     do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_ifdown)
-#
-#
-# def test_producing_to_lost_leader_using_librdkafka_producer_and_disconnect():
-#     do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_disconnect)
-#
-#
-# def test_producing_to_lost_leader_using_librdkafka_producer_and_kill():
-#     do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_kill)
+<<<<<<< Updated upstream
+def test_producing_to_lost_leader_using_librdkafka_producer_and_ifdown():
+    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_ifdown)
+
+
+def test_producing_to_lost_leader_using_librdkafka_producer_and_disconnect():
+    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_disconnect)
+
+
+def test_producing_to_lost_leader_using_librdkafka_producer_and_kill():
+    do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java", take_down_kill)
 
 
 def test_producing_to_lost_leader_using_java_producer_and_ifdown():
     do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_ifdown)
 
 
-# def test_producing_to_lost_leader_using_java_producer_and_disconnect():
-#     do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_disconnect)
-#
-#
-# def test_producing_to_lost_leader_using_java_producer_and_kill():
-#     do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_kill)
+def test_producing_to_lost_leader_using_java_producer_and_disconnect():
+    do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_disconnect)
+=======
+# def test_producing_to_lost_leader_using_librdkafka_producer():
+#     do_test_producing_to_lost_leader("producer_librdkafka", "consumer_java")
+>>>>>>> Stashed changes
+
+
+def test_producing_to_lost_leader_using_java_producer_and_kill():
+    do_test_producing_to_lost_leader("producer_java", "consumer_java", take_down_kill)
