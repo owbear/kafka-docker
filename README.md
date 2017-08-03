@@ -6,6 +6,7 @@ Please refer to the [original README.md](https://github.com/wurstmeister/kafka-d
 
 ## Pre-Requisites
 
+- Build the docker image with ```docker build -t wurstmeister/kafka:0.11.0.0 .```
 - install docker-compose [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 - install docker-py [https://github.com/docker/docker-py/](https://pypi.python.org/pypi/docker/)
 - modify ```ZK_COMMAND``` in ```kafka-network-tests.py``` to match your zookeeper image
