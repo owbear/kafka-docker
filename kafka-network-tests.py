@@ -10,12 +10,12 @@ from subprocess import check_call, check_output, STDOUT
 from docker import Client
 
 PROJECT_NAME = "kafkanetworkfailuretests"
-ZK_BIN_PATH = "/tmp/kafka_2.12-0.10.2.1/bin/kafka-run-class.sh"
+ZK_COMMAND = "docker exec -t {}_zookeeper_1 env ZOO_LOG4J_PROP=WARN,CONSOLE bin/zkCli.sh".format(PROJECT_NAME).split()
 TEST_TOPIC = "test-topic"
 
 
 def zk_query(path, fail_on_error=True):
-    zk_cmd = [ZK_BIN_PATH, "kafka.tools.ZooKeeperMainWrapper", "get", path]
+    zk_cmd = ZK_COMMAND + ["get", path]
     output = check_output(zk_cmd, stderr=STDOUT)
     for line in output.decode().split():
         match = re.match("^({.+})$", line)

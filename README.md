@@ -8,7 +8,7 @@ Please refer to the [original README.md](https://github.com/wurstmeister/kafka-d
 
 - install docker-compose [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 - install docker-py [https://github.com/docker/docker-py/](https://pypi.python.org/pypi/docker/)
-- modify ```ZK_BIN_PATH``` in ```kafka-network-tests.py``` to point to your kafka installation
+- modify ```ZK_COMMAND``` in ```kafka-network-tests.py``` to match your zookeeper image
 - if you want to customize any Kafka parameters, simply add them as environment variables in ```docker-compose.yml```, e.g. in order to increase the ```message.max.bytes``` parameter set the environment to
 
 ## Running the tests
