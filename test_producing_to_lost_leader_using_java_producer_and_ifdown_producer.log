@@ -1,0 +1,224 @@
+2017-08-04 14:26:00,116 # Logs of what the producer produced:
+Fri Aug 4 14:24:34 UTC 2017 Starting java producer
+Fri Aug  4 14:24:34 UTC 2017
+Fri Aug  4 14:24:35 UTC 2017
+Fri Aug  4 14:24:35 UTC 2017
+Fri Aug  4 14:24:36 UTC 2017
+Fri Aug  4 14:24:36 UTC 2017
+Fri Aug  4 14:24:37 UTC 2017
+Fri Aug  4 14:24:37 UTC 2017
+Fri Aug  4 14:24:38 UTC 2017
+Fri Aug  4 14:24:38 UTC 2017
+Fri Aug  4 14:24:39 UTC 2017
+Fri Aug  4 14:24:39 UTC 2017
+Fri Aug  4 14:24:40 UTC 2017
+Fri Aug  4 14:24:40 UTC 2017
+Fri Aug  4 14:24:41 UTC 2017
+Fri Aug  4 14:24:41 UTC 2017
+Fri Aug  4 14:24:42 UTC 2017
+Fri Aug  4 14:24:42 UTC 2017
+Fri Aug  4 14:24:43 UTC 2017
+Fri Aug  4 14:24:43 UTC 2017
+Fri Aug  4 14:24:44 UTC 2017
+Fri Aug  4 14:24:44 UTC 2017
+Fri Aug  4 14:24:45 UTC 2017
+Fri Aug  4 14:24:45 UTC 2017
+Fri Aug  4 14:24:46 UTC 2017
+Fri Aug  4 14:24:46 UTC 2017
+[2017-08-04 14:24:46,657] WARN Got error produce response with correlation id 14 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
+[2017-08-04 14:24:46,658] WARN Got error produce response with correlation id 13 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
+Fri Aug  4 14:24:47 UTC 2017
+Fri Aug  4 14:24:47 UTC 2017
+Fri Aug  4 14:24:48 UTC 2017
+Fri Aug  4 14:24:48 UTC 2017
+[2017-08-04 14:24:48,673] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1914 ms has passed since last attempt plus backoff time
+[2017-08-04 14:24:48,674] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1914 ms has passed since last attempt plus backoff time
+[2017-08-04 14:24:48,674] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1916 ms has passed since last attempt plus backoff time
+[2017-08-04 14:24:48,674] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1916 ms has passed since last attempt plus backoff time
+[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
+Fri Aug  4 14:24:49 UTC 2017
+Fri Aug  4 14:24:49 UTC 2017
+Fri Aug  4 14:24:50 UTC 2017
+Fri Aug  4 14:24:50 UTC 2017
+Fri Aug  4 14:24:51 UTC 2017
+[2017-08-04 14:24:51,679] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:51,680] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:51,680] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:51,680] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:51,681] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+Fri Aug  4 14:24:51 UTC 2017
+Fri Aug  4 14:24:52 UTC 2017
+Fri Aug  4 14:24:52 UTC 2017
+Fri Aug  4 14:24:53 UTC 2017
+Fri Aug  4 14:24:53 UTC 2017
+[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:54,192] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+Fri Aug  4 14:24:54 UTC 2017
+Fri Aug  4 14:24:54 UTC 2017
+Fri Aug  4 14:24:55 UTC 2017
+Fri Aug  4 14:24:55 UTC 2017
+Fri Aug  4 14:24:56 UTC 2017
+[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+Fri Aug  4 14:24:56 UTC 2017
+Fri Aug  4 14:24:57 UTC 2017
+Fri Aug  4 14:24:57 UTC 2017
+Fri Aug  4 14:24:58 UTC 2017
+Fri Aug  4 14:24:58 UTC 2017
+[2017-08-04 14:24:59,213] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:59,213] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:59,214] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:59,214] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:24:59,215] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+Fri Aug  4 14:24:59 UTC 2017
+Fri Aug  4 14:24:59 UTC 2017
+Fri Aug  4 14:25:00 UTC 2017
+Fri Aug  4 14:25:00 UTC 2017
+Fri Aug  4 14:25:01 UTC 2017
+[2017-08-04 14:25:01,728] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:01,728] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:01,729] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:01,729] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:01,729] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
+Fri Aug  4 14:25:01 UTC 2017
+Fri Aug  4 14:25:02 UTC 2017
+Fri Aug  4 14:25:02 UTC 2017
+Fri Aug  4 14:25:03 UTC 2017
+Fri Aug  4 14:25:03 UTC 2017
+[2017-08-04 14:25:04,239] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
+Fri Aug  4 14:25:04 UTC 2017
+Fri Aug  4 14:25:04 UTC 2017
+Fri Aug  4 14:25:05 UTC 2017
+Fri Aug  4 14:25:05 UTC 2017
+Fri Aug  4 14:25:06 UTC 2017
+[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
+Fri Aug  4 14:25:06 UTC 2017
+Fri Aug  4 14:25:07 UTC 2017
+Fri Aug  4 14:25:07 UTC 2017
+Fri Aug  4 14:25:08 UTC 2017
+Fri Aug  4 14:25:08 UTC 2017
+Fri Aug  4 14:25:09 UTC 2017
+Fri Aug  4 14:25:09 UTC 2017
+Fri Aug  4 14:25:10 UTC 2017
+Fri Aug  4 14:25:10 UTC 2017
+Fri Aug  4 14:25:11 UTC 2017
+Fri Aug  4 14:25:11 UTC 2017
+Fri Aug  4 14:25:12 UTC 2017
+Fri Aug  4 14:25:12 UTC 2017
+Fri Aug  4 14:25:13 UTC 2017
+Fri Aug  4 14:25:13 UTC 2017
+Fri Aug  4 14:25:14 UTC 2017
+Fri Aug  4 14:25:14 UTC 2017
+Fri Aug  4 14:25:15 UTC 2017
+Fri Aug  4 14:25:15 UTC 2017
+Fri Aug  4 14:25:16 UTC 2017
+Fri Aug  4 14:25:16 UTC 2017
+Fri Aug  4 14:25:17 UTC 2017
+Fri Aug  4 14:25:17 UTC 2017
+Fri Aug  4 14:25:18 UTC 2017
+Fri Aug  4 14:25:18 UTC 2017
+Fri Aug  4 14:25:19 UTC 2017
+Fri Aug  4 14:25:19 UTC 2017
+Fri Aug  4 14:25:20 UTC 2017
+Fri Aug  4 14:25:20 UTC 2017
+Fri Aug  4 14:25:21 UTC 2017
+Fri Aug  4 14:25:21 UTC 2017
+Fri Aug  4 14:25:22 UTC 2017
+Fri Aug  4 14:25:22 UTC 2017
+Fri Aug  4 14:25:23 UTC 2017
+Fri Aug  4 14:25:23 UTC 2017
+Fri Aug  4 14:25:24 UTC 2017
+Fri Aug  4 14:25:24 UTC 2017
+Fri Aug  4 14:25:25 UTC 2017
+Fri Aug  4 14:25:25 UTC 2017
+Fri Aug  4 14:25:26 UTC 2017
+Fri Aug  4 14:25:26 UTC 2017
+Fri Aug  4 14:25:27 UTC 2017
+Fri Aug  4 14:25:27 UTC 2017
+Fri Aug  4 14:25:28 UTC 2017
+Fri Aug  4 14:25:28 UTC 2017
+Fri Aug  4 14:25:29 UTC 2017
+Fri Aug  4 14:25:29 UTC 2017
+Fri Aug  4 14:25:30 UTC 2017
+Fri Aug  4 14:25:30 UTC 2017
+Fri Aug  4 14:25:31 UTC 2017
+Fri Aug  4 14:25:31 UTC 2017
+Fri Aug  4 14:25:32 UTC 2017
+Fri Aug  4 14:25:32 UTC 2017
+Fri Aug  4 14:25:33 UTC 2017
+Fri Aug  4 14:25:33 UTC 2017
+Fri Aug  4 14:25:34 UTC 2017
+Fri Aug  4 14:25:34 UTC 2017
+Fri Aug  4 14:25:35 UTC 2017
+Fri Aug  4 14:25:35 UTC 2017
+Fri Aug  4 14:25:36 UTC 2017
+Fri Aug  4 14:25:36 UTC 2017
+Fri Aug  4 14:25:37 UTC 2017
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
