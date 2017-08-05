@@ -1,224 +1,354 @@
-2017-08-04 14:26:00,116 # Logs of what the producer produced:
-Fri Aug 4 14:24:34 UTC 2017 Starting java producer
-Fri Aug  4 14:24:34 UTC 2017
-Fri Aug  4 14:24:35 UTC 2017
-Fri Aug  4 14:24:35 UTC 2017
-Fri Aug  4 14:24:36 UTC 2017
-Fri Aug  4 14:24:36 UTC 2017
-Fri Aug  4 14:24:37 UTC 2017
-Fri Aug  4 14:24:37 UTC 2017
-Fri Aug  4 14:24:38 UTC 2017
-Fri Aug  4 14:24:38 UTC 2017
-Fri Aug  4 14:24:39 UTC 2017
-Fri Aug  4 14:24:39 UTC 2017
-Fri Aug  4 14:24:40 UTC 2017
-Fri Aug  4 14:24:40 UTC 2017
-Fri Aug  4 14:24:41 UTC 2017
-Fri Aug  4 14:24:41 UTC 2017
-Fri Aug  4 14:24:42 UTC 2017
-Fri Aug  4 14:24:42 UTC 2017
-Fri Aug  4 14:24:43 UTC 2017
-Fri Aug  4 14:24:43 UTC 2017
-Fri Aug  4 14:24:44 UTC 2017
-Fri Aug  4 14:24:44 UTC 2017
-Fri Aug  4 14:24:45 UTC 2017
-Fri Aug  4 14:24:45 UTC 2017
-Fri Aug  4 14:24:46 UTC 2017
-Fri Aug  4 14:24:46 UTC 2017
-[2017-08-04 14:24:46,657] WARN Got error produce response with correlation id 14 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
-[2017-08-04 14:24:46,658] WARN Got error produce response with correlation id 13 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
-Fri Aug  4 14:24:47 UTC 2017
-Fri Aug  4 14:24:47 UTC 2017
-Fri Aug  4 14:24:48 UTC 2017
-Fri Aug  4 14:24:48 UTC 2017
-[2017-08-04 14:24:48,673] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1914 ms has passed since last attempt plus backoff time
-[2017-08-04 14:24:48,674] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1914 ms has passed since last attempt plus backoff time
-[2017-08-04 14:24:48,674] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1916 ms has passed since last attempt plus backoff time
-[2017-08-04 14:24:48,674] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1916 ms has passed since last attempt plus backoff time
-[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:48,675] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2019 ms has passed since batch creation plus linger time
-Fri Aug  4 14:24:49 UTC 2017
-Fri Aug  4 14:24:49 UTC 2017
-Fri Aug  4 14:24:50 UTC 2017
-Fri Aug  4 14:24:50 UTC 2017
-Fri Aug  4 14:24:51 UTC 2017
-[2017-08-04 14:24:51,679] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:51,680] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:51,680] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:51,680] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:51,681] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-Fri Aug  4 14:24:51 UTC 2017
-Fri Aug  4 14:24:52 UTC 2017
-Fri Aug  4 14:24:52 UTC 2017
-Fri Aug  4 14:24:53 UTC 2017
-Fri Aug  4 14:24:53 UTC 2017
-[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:54,191] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:54,192] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-Fri Aug  4 14:24:54 UTC 2017
-Fri Aug  4 14:24:54 UTC 2017
-Fri Aug  4 14:24:55 UTC 2017
-Fri Aug  4 14:24:55 UTC 2017
-Fri Aug  4 14:24:56 UTC 2017
-[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:56,703] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
-Fri Aug  4 14:24:56 UTC 2017
-Fri Aug  4 14:24:57 UTC 2017
-Fri Aug  4 14:24:57 UTC 2017
-Fri Aug  4 14:24:58 UTC 2017
-Fri Aug  4 14:24:58 UTC 2017
-[2017-08-04 14:24:59,213] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:59,213] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:59,214] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:59,214] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:24:59,215] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-Fri Aug  4 14:24:59 UTC 2017
-Fri Aug  4 14:24:59 UTC 2017
-Fri Aug  4 14:25:00 UTC 2017
-Fri Aug  4 14:25:00 UTC 2017
-Fri Aug  4 14:25:01 UTC 2017
-[2017-08-04 14:25:01,728] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:01,728] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:01,729] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:01,729] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:01,729] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1504 ms has passed since batch creation plus linger time
-Fri Aug  4 14:25:01 UTC 2017
-Fri Aug  4 14:25:02 UTC 2017
-Fri Aug  4 14:25:02 UTC 2017
-Fri Aug  4 14:25:03 UTC 2017
-Fri Aug  4 14:25:03 UTC 2017
-[2017-08-04 14:25:04,239] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:04,240] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
-org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1503 ms has passed since batch creation plus linger time
-Fri Aug  4 14:25:04 UTC 2017
-Fri Aug  4 14:25:04 UTC 2017
-Fri Aug  4 14:25:05 UTC 2017
-Fri Aug  4 14:25:05 UTC 2017
-Fri Aug  4 14:25:06 UTC 2017
-[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+2017-08-05 11:32:28,144 # Logs of what the producer produced:
+Sat Aug 5 11:31:02 UTC 2017 Starting java producer
+Sat Aug  5 11:31:03 UTC 2017
+[2017-08-05 11:31:03,648] INFO ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafkanetworkfailuretests_kafka_1:9092, kafkanetworkfailuretests_kafka_2:9092, kafkanetworkfailuretests_kafka_3:9092]
+	buffer.memory = 33554432
+	client.id = console-producer
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 1000
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 1500
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 102400
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+ (org.apache.kafka.clients.producer.ProducerConfig)
+[2017-08-05 11:31:03,673] DEBUG Added sensor with name bufferpool-wait-time (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,676] DEBUG Added sensor with name buffer-exhausted-records (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,679] DEBUG Updated cluster metadata version 1 to Cluster(id = null, nodes = [kafkanetworkfailuretests_kafka_2:9092 (id: -2 rack: null), kafkanetworkfailuretests_kafka_3:9092 (id: -3 rack: null), kafkanetworkfailuretests_kafka_1:9092 (id: -1 rack: null)], partitions = []) (org.apache.kafka.clients.Metadata)
+[2017-08-05 11:31:03,684] DEBUG Added sensor with name produce-throttle-time (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,690] DEBUG Added sensor with name connections-closed: (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,690] DEBUG Added sensor with name connections-created: (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,691] DEBUG Added sensor with name bytes-sent-received: (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,691] DEBUG Added sensor with name bytes-sent: (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,691] DEBUG Added sensor with name bytes-received: (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,692] DEBUG Added sensor with name select-time: (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,693] DEBUG Added sensor with name io-time: (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,695] DEBUG Added sensor with name batch-size (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,696] DEBUG Added sensor with name compression-rate (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,696] DEBUG Added sensor with name queue-time (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,696] DEBUG Added sensor with name request-time (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,700] DEBUG Added sensor with name records-per-request (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,701] DEBUG Added sensor with name record-retries (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,701] DEBUG Added sensor with name errors (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,701] DEBUG Added sensor with name record-size-max (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,702] DEBUG Added sensor with name batch-split-rate (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,703] DEBUG Starting Kafka producer I/O thread. (org.apache.kafka.clients.producer.internals.Sender)
+[2017-08-05 11:31:03,706] INFO Kafka version : 0.11.0.0 (org.apache.kafka.common.utils.AppInfoParser)
+[2017-08-05 11:31:03,706] INFO Kafka commitId : cb8625948210849f (org.apache.kafka.common.utils.AppInfoParser)
+[2017-08-05 11:31:03,706] DEBUG Kafka producer started (org.apache.kafka.clients.producer.KafkaProducer)
+[2017-08-05 11:31:03,724] DEBUG Initialize connection to node -3 for sending metadata request (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,725] DEBUG Initiating connection to node -3 at kafkanetworkfailuretests_kafka_3:9092. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,734] DEBUG Added sensor with name node--3.bytes-sent (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,734] DEBUG Added sensor with name node--3.bytes-received (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,735] DEBUG Added sensor with name node--3.latency (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,735] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node -3 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:03,739] DEBUG Completed connection to node -3.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,739] DEBUG Initiating API versions fetch from node -3. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,768] DEBUG Initialize connection to node -2 for sending metadata request (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,768] DEBUG Initiating connection to node -2 at kafkanetworkfailuretests_kafka_2:9092. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,769] DEBUG Added sensor with name node--2.bytes-sent (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,769] DEBUG Added sensor with name node--2.bytes-received (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,770] DEBUG Added sensor with name node--2.latency (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,770] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node -2 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:03,771] DEBUG Completed connection to node -2.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,771] DEBUG Initiating API versions fetch from node -2. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,772] DEBUG Initialize connection to node -1 for sending metadata request (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,772] DEBUG Initiating connection to node -1 at kafkanetworkfailuretests_kafka_1:9092. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,772] DEBUG Added sensor with name node--1.bytes-sent (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,773] DEBUG Added sensor with name node--1.bytes-received (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,773] DEBUG Added sensor with name node--1.latency (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:03,774] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node -1 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:03,774] DEBUG Completed connection to node -1.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,774] DEBUG Initiating API versions fetch from node -1. (org.apache.kafka.clients.NetworkClient)
+Sat Aug  5 11:31:03 UTC 2017
+[2017-08-05 11:31:03,820] DEBUG Recorded API versions for node -3: (Produce(0): 0 to 3 [usable: 3], Fetch(1): 0 to 5 [usable: 5], Offsets(2): 0 to 2 [usable: 2], Metadata(3): 0 to 4 [usable: 4], LeaderAndIsr(4): 0 [usable: 0], StopReplica(5): 0 [usable: 0], UpdateMetadata(6): 0 to 3 [usable: 3], ControlledShutdown(7): 1 [usable: 1], OffsetCommit(8): 0 to 3 [usable: 3], OffsetFetch(9): 0 to 3 [usable: 3], FindCoordinator(10): 0 to 1 [usable: 1], JoinGroup(11): 0 to 2 [usable: 2], Heartbeat(12): 0 to 1 [usable: 1], LeaveGroup(13): 0 to 1 [usable: 1], SyncGroup(14): 0 to 1 [usable: 1], DescribeGroups(15): 0 to 1 [usable: 1], ListGroups(16): 0 to 1 [usable: 1], SaslHandshake(17): 0 [usable: 0], ApiVersions(18): 0 to 1 [usable: 1], CreateTopics(19): 0 to 2 [usable: 2], DeleteTopics(20): 0 to 1 [usable: 1], DeleteRecords(21): 0 [usable: 0], InitProducerId(22): 0 [usable: 0], OffsetForLeaderEpoch(23): 0 [usable: 0], AddPartitionsToTxn(24): 0 [usable: 0], AddOffsetsToTxn(25): 0 [usable: 0], EndTxn(26): 0 [usable: 0], WriteTxnMarkers(27): 0 [usable: 0], TxnOffsetCommit(28): 0 [usable: 0], DescribeAcls(29): 0 [usable: 0], CreateAcls(30): 0 [usable: 0], DeleteAcls(31): 0 [usable: 0], DescribeConfigs(32): 0 [usable: 0], AlterConfigs(33): 0 [usable: 0]) (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,820] DEBUG Sending metadata request (type=MetadataRequest, topics=test-topic) to node -3 (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,822] DEBUG Recorded API versions for node -2: (Produce(0): 0 to 3 [usable: 3], Fetch(1): 0 to 5 [usable: 5], Offsets(2): 0 to 2 [usable: 2], Metadata(3): 0 to 4 [usable: 4], LeaderAndIsr(4): 0 [usable: 0], StopReplica(5): 0 [usable: 0], UpdateMetadata(6): 0 to 3 [usable: 3], ControlledShutdown(7): 1 [usable: 1], OffsetCommit(8): 0 to 3 [usable: 3], OffsetFetch(9): 0 to 3 [usable: 3], FindCoordinator(10): 0 to 1 [usable: 1], JoinGroup(11): 0 to 2 [usable: 2], Heartbeat(12): 0 to 1 [usable: 1], LeaveGroup(13): 0 to 1 [usable: 1], SyncGroup(14): 0 to 1 [usable: 1], DescribeGroups(15): 0 to 1 [usable: 1], ListGroups(16): 0 to 1 [usable: 1], SaslHandshake(17): 0 [usable: 0], ApiVersions(18): 0 to 1 [usable: 1], CreateTopics(19): 0 to 2 [usable: 2], DeleteTopics(20): 0 to 1 [usable: 1], DeleteRecords(21): 0 [usable: 0], InitProducerId(22): 0 [usable: 0], OffsetForLeaderEpoch(23): 0 [usable: 0], AddPartitionsToTxn(24): 0 [usable: 0], AddOffsetsToTxn(25): 0 [usable: 0], EndTxn(26): 0 [usable: 0], WriteTxnMarkers(27): 0 [usable: 0], TxnOffsetCommit(28): 0 [usable: 0], DescribeAcls(29): 0 [usable: 0], CreateAcls(30): 0 [usable: 0], DeleteAcls(31): 0 [usable: 0], DescribeConfigs(32): 0 [usable: 0], AlterConfigs(33): 0 [usable: 0]) (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,823] DEBUG Recorded API versions for node -1: (Produce(0): 0 to 3 [usable: 3], Fetch(1): 0 to 5 [usable: 5], Offsets(2): 0 to 2 [usable: 2], Metadata(3): 0 to 4 [usable: 4], LeaderAndIsr(4): 0 [usable: 0], StopReplica(5): 0 [usable: 0], UpdateMetadata(6): 0 to 3 [usable: 3], ControlledShutdown(7): 1 [usable: 1], OffsetCommit(8): 0 to 3 [usable: 3], OffsetFetch(9): 0 to 3 [usable: 3], FindCoordinator(10): 0 to 1 [usable: 1], JoinGroup(11): 0 to 2 [usable: 2], Heartbeat(12): 0 to 1 [usable: 1], LeaveGroup(13): 0 to 1 [usable: 1], SyncGroup(14): 0 to 1 [usable: 1], DescribeGroups(15): 0 to 1 [usable: 1], ListGroups(16): 0 to 1 [usable: 1], SaslHandshake(17): 0 [usable: 0], ApiVersions(18): 0 to 1 [usable: 1], CreateTopics(19): 0 to 2 [usable: 2], DeleteTopics(20): 0 to 1 [usable: 1], DeleteRecords(21): 0 [usable: 0], InitProducerId(22): 0 [usable: 0], OffsetForLeaderEpoch(23): 0 [usable: 0], AddPartitionsToTxn(24): 0 [usable: 0], AddOffsetsToTxn(25): 0 [usable: 0], EndTxn(26): 0 [usable: 0], WriteTxnMarkers(27): 0 [usable: 0], TxnOffsetCommit(28): 0 [usable: 0], DescribeAcls(29): 0 [usable: 0], CreateAcls(30): 0 [usable: 0], DeleteAcls(31): 0 [usable: 0], DescribeConfigs(32): 0 [usable: 0], AlterConfigs(33): 0 [usable: 0]) (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:03,846] DEBUG Updated cluster metadata version 2 to Cluster(id = 1fZRueS7SLi2gQGN8yVmsQ, nodes = [172.21.0.1:33403 (id: 1003 rack: null), 172.21.0.1:33404 (id: 1002 rack: null), 172.21.0.1:33402 (id: 1001 rack: null)], partitions = [Partition(topic = test-topic, partition = 0, leader = 1003, replicas = [1003,1002], isr = [1003,1002])]) (org.apache.kafka.clients.Metadata)
+Sat Aug  5 11:31:04 UTC 2017
+Sat Aug  5 11:31:04 UTC 2017
+[2017-08-05 11:31:04,859] DEBUG Initiating connection to node 1003 at 172.21.0.1:33403. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:04,860] DEBUG Added sensor with name node-1003.bytes-sent (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:04,861] DEBUG Added sensor with name node-1003.bytes-received (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:04,861] DEBUG Added sensor with name node-1003.latency (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:04,861] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node 1003 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:04,861] DEBUG Completed connection to node 1003.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:04,862] DEBUG Initiating API versions fetch from node 1003. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:04,864] DEBUG Recorded API versions for node 1003: (Produce(0): 0 to 3 [usable: 3], Fetch(1): 0 to 5 [usable: 5], Offsets(2): 0 to 2 [usable: 2], Metadata(3): 0 to 4 [usable: 4], LeaderAndIsr(4): 0 [usable: 0], StopReplica(5): 0 [usable: 0], UpdateMetadata(6): 0 to 3 [usable: 3], ControlledShutdown(7): 1 [usable: 1], OffsetCommit(8): 0 to 3 [usable: 3], OffsetFetch(9): 0 to 3 [usable: 3], FindCoordinator(10): 0 to 1 [usable: 1], JoinGroup(11): 0 to 2 [usable: 2], Heartbeat(12): 0 to 1 [usable: 1], LeaveGroup(13): 0 to 1 [usable: 1], SyncGroup(14): 0 to 1 [usable: 1], DescribeGroups(15): 0 to 1 [usable: 1], ListGroups(16): 0 to 1 [usable: 1], SaslHandshake(17): 0 [usable: 0], ApiVersions(18): 0 to 1 [usable: 1], CreateTopics(19): 0 to 2 [usable: 2], DeleteTopics(20): 0 to 1 [usable: 1], DeleteRecords(21): 0 [usable: 0], InitProducerId(22): 0 [usable: 0], OffsetForLeaderEpoch(23): 0 [usable: 0], AddPartitionsToTxn(24): 0 [usable: 0], AddOffsetsToTxn(25): 0 [usable: 0], EndTxn(26): 0 [usable: 0], WriteTxnMarkers(27): 0 [usable: 0], TxnOffsetCommit(28): 0 [usable: 0], DescribeAcls(29): 0 [usable: 0], CreateAcls(30): 0 [usable: 0], DeleteAcls(31): 0 [usable: 0], DescribeConfigs(32): 0 [usable: 0], AlterConfigs(33): 0 [usable: 0]) (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:04,867] DEBUG Added sensor with name topic.test-topic.records-per-batch (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:04,867] DEBUG Added sensor with name topic.test-topic.bytes (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:04,868] DEBUG Added sensor with name topic.test-topic.compression-rate (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:04,868] DEBUG Added sensor with name topic.test-topic.record-retries (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:04,868] DEBUG Added sensor with name topic.test-topic.record-errors (org.apache.kafka.common.metrics.Metrics)
+Sat Aug  5 11:31:05 UTC 2017
+Sat Aug  5 11:31:05 UTC 2017
+Sat Aug  5 11:31:06 UTC 2017
+Sat Aug  5 11:31:06 UTC 2017
+Sat Aug  5 11:31:07 UTC 2017
+Sat Aug  5 11:31:07 UTC 2017
+Sat Aug  5 11:31:08 UTC 2017
+Sat Aug  5 11:31:08 UTC 2017
+Sat Aug  5 11:31:09 UTC 2017
+Sat Aug  5 11:31:09 UTC 2017
+Sat Aug  5 11:31:10 UTC 2017
+Sat Aug  5 11:31:10 UTC 2017
+Sat Aug  5 11:31:11 UTC 2017
+Sat Aug  5 11:31:11 UTC 2017
+Sat Aug  5 11:31:12 UTC 2017
+Sat Aug  5 11:31:12 UTC 2017
+Sat Aug  5 11:31:13 UTC 2017
+Sat Aug  5 11:31:13 UTC 2017
+Sat Aug  5 11:31:14 UTC 2017
+Sat Aug  5 11:31:14 UTC 2017
+[2017-08-05 11:31:15,367] DEBUG Disconnecting from node 1003 due to request timeout. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,368] WARN Got error produce response with correlation id 14 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
+[2017-08-05 11:31:15,368] WARN Got error produce response with correlation id 13 on topic-partition test-topic-0, retrying (2 attempts left). Error: NETWORK_EXCEPTION (org.apache.kafka.clients.producer.internals.Sender)
+[2017-08-05 11:31:15,368] DEBUG Initialize connection to node 1002 for sending metadata request (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,368] DEBUG Initiating connection to node 1002 at 172.21.0.1:33404. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,369] DEBUG Added sensor with name node-1002.bytes-sent (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:15,369] DEBUG Added sensor with name node-1002.bytes-received (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:15,370] DEBUG Added sensor with name node-1002.latency (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:15,370] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node 1002 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:15,370] DEBUG Completed connection to node 1002.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,370] DEBUG Initiating API versions fetch from node 1002. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,371] DEBUG Initialize connection to node 1001 for sending metadata request (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,371] DEBUG Initiating connection to node 1001 at 172.21.0.1:33402. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,371] DEBUG Added sensor with name node-1001.bytes-sent (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:15,371] DEBUG Added sensor with name node-1001.bytes-received (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:15,372] DEBUG Added sensor with name node-1001.latency (org.apache.kafka.common.metrics.Metrics)
+[2017-08-05 11:31:15,372] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node 1001 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:15,372] DEBUG Completed connection to node 1001.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,373] DEBUG Initiating API versions fetch from node 1001. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,375] DEBUG Recorded API versions for node 1002: (Produce(0): 0 to 3 [usable: 3], Fetch(1): 0 to 5 [usable: 5], Offsets(2): 0 to 2 [usable: 2], Metadata(3): 0 to 4 [usable: 4], LeaderAndIsr(4): 0 [usable: 0], StopReplica(5): 0 [usable: 0], UpdateMetadata(6): 0 to 3 [usable: 3], ControlledShutdown(7): 1 [usable: 1], OffsetCommit(8): 0 to 3 [usable: 3], OffsetFetch(9): 0 to 3 [usable: 3], FindCoordinator(10): 0 to 1 [usable: 1], JoinGroup(11): 0 to 2 [usable: 2], Heartbeat(12): 0 to 1 [usable: 1], LeaveGroup(13): 0 to 1 [usable: 1], SyncGroup(14): 0 to 1 [usable: 1], DescribeGroups(15): 0 to 1 [usable: 1], ListGroups(16): 0 to 1 [usable: 1], SaslHandshake(17): 0 [usable: 0], ApiVersions(18): 0 to 1 [usable: 1], CreateTopics(19): 0 to 2 [usable: 2], DeleteTopics(20): 0 to 1 [usable: 1], DeleteRecords(21): 0 [usable: 0], InitProducerId(22): 0 [usable: 0], OffsetForLeaderEpoch(23): 0 [usable: 0], AddPartitionsToTxn(24): 0 [usable: 0], AddOffsetsToTxn(25): 0 [usable: 0], EndTxn(26): 0 [usable: 0], WriteTxnMarkers(27): 0 [usable: 0], TxnOffsetCommit(28): 0 [usable: 0], DescribeAcls(29): 0 [usable: 0], CreateAcls(30): 0 [usable: 0], DeleteAcls(31): 0 [usable: 0], DescribeConfigs(32): 0 [usable: 0], AlterConfigs(33): 0 [usable: 0]) (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,376] DEBUG Sending metadata request (type=MetadataRequest, topics=test-topic) to node 1002 (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,377] DEBUG Recorded API versions for node 1001: (Produce(0): 0 to 3 [usable: 3], Fetch(1): 0 to 5 [usable: 5], Offsets(2): 0 to 2 [usable: 2], Metadata(3): 0 to 4 [usable: 4], LeaderAndIsr(4): 0 [usable: 0], StopReplica(5): 0 [usable: 0], UpdateMetadata(6): 0 to 3 [usable: 3], ControlledShutdown(7): 1 [usable: 1], OffsetCommit(8): 0 to 3 [usable: 3], OffsetFetch(9): 0 to 3 [usable: 3], FindCoordinator(10): 0 to 1 [usable: 1], JoinGroup(11): 0 to 2 [usable: 2], Heartbeat(12): 0 to 1 [usable: 1], LeaveGroup(13): 0 to 1 [usable: 1], SyncGroup(14): 0 to 1 [usable: 1], DescribeGroups(15): 0 to 1 [usable: 1], ListGroups(16): 0 to 1 [usable: 1], SaslHandshake(17): 0 [usable: 0], ApiVersions(18): 0 to 1 [usable: 1], CreateTopics(19): 0 to 2 [usable: 2], DeleteTopics(20): 0 to 1 [usable: 1], DeleteRecords(21): 0 [usable: 0], InitProducerId(22): 0 [usable: 0], OffsetForLeaderEpoch(23): 0 [usable: 0], AddPartitionsToTxn(24): 0 [usable: 0], AddOffsetsToTxn(25): 0 [usable: 0], EndTxn(26): 0 [usable: 0], WriteTxnMarkers(27): 0 [usable: 0], TxnOffsetCommit(28): 0 [usable: 0], DescribeAcls(29): 0 [usable: 0], CreateAcls(30): 0 [usable: 0], DeleteAcls(31): 0 [usable: 0], DescribeConfigs(32): 0 [usable: 0], AlterConfigs(33): 0 [usable: 0]) (org.apache.kafka.clients.NetworkClient)
+Sat Aug  5 11:31:15 UTC 2017
+[2017-08-05 11:31:15,379] DEBUG Updated cluster metadata version 3 to Cluster(id = 1fZRueS7SLi2gQGN8yVmsQ, nodes = [172.21.0.1:33402 (id: 1001 rack: null), 172.21.0.1:33404 (id: 1002 rack: null), 172.21.0.1:33403 (id: 1003 rack: null)], partitions = [Partition(topic = test-topic, partition = 0, leader = 1003, replicas = [1003,1002], isr = [1003,1002])]) (org.apache.kafka.clients.Metadata)
+[2017-08-05 11:31:15,469] DEBUG Initiating connection to node 1003 at 172.21.0.1:33403. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,469] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node 1003 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:15,470] DEBUG Completed connection to node 1003.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:15,472] DEBUG Initiating API versions fetch from node 1003. (org.apache.kafka.clients.NetworkClient)
+Sat Aug  5 11:31:15 UTC 2017
+Sat Aug  5 11:31:16 UTC 2017
+Sat Aug  5 11:31:16 UTC 2017
+Sat Aug  5 11:31:17 UTC 2017
+[2017-08-05 11:31:17,390] DEBUG Disconnecting from node 1003 due to request timeout. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:17,391] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1922 ms has passed since last attempt plus backoff time
+[2017-08-05 11:31:17,394] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1922 ms has passed since last attempt plus backoff time
+[2017-08-05 11:31:17,395] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1923 ms has passed since last attempt plus backoff time
+[2017-08-05 11:31:17,395] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 2 record(s) for test-topic-0: 1923 ms has passed since last attempt plus backoff time
+[2017-08-05 11:31:17,396] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2024 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:17,396] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2024 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:17,396] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2024 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:17,396] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2024 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:17,396] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2024 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:17,396] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2024 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:17,396] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 7 record(s) for test-topic-0: 2024 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:17,397] DEBUG Sending metadata request (type=MetadataRequest, topics=test-topic) to node 1001 (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:17,416] DEBUG Updated cluster metadata version 4 to Cluster(id = 1fZRueS7SLi2gQGN8yVmsQ, nodes = [172.21.0.1:33402 (id: 1001 rack: null), 172.21.0.1:33403 (id: 1003 rack: null), 172.21.0.1:33404 (id: 1002 rack: null)], partitions = [Partition(topic = test-topic, partition = 0, leader = 1003, replicas = [1003,1002], isr = [1003,1002])]) (org.apache.kafka.clients.Metadata)
+Sat Aug  5 11:31:17 UTC 2017
+Sat Aug  5 11:31:18 UTC 2017
+[2017-08-05 11:31:18,897] DEBUG Initiating connection to node 1003 at 172.21.0.1:33403. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:18,898] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node 1003 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:18,898] DEBUG Completed connection to node 1003.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:18,898] DEBUG Initiating API versions fetch from node 1003. (org.apache.kafka.clients.NetworkClient)
+Sat Aug  5 11:31:18 UTC 2017
+Sat Aug  5 11:31:19 UTC 2017
+Sat Aug  5 11:31:19 UTC 2017
+[2017-08-05 11:31:20,401] DEBUG Disconnecting from node 1003 due to request timeout. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:20,401] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1507 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:20,401] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1507 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:20,401] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1507 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:20,401] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1507 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:20,402] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1507 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:20,402] DEBUG Sending metadata request (type=MetadataRequest, topics=test-topic) to node 1002 (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:20,404] DEBUG Updated cluster metadata version 5 to Cluster(id = 1fZRueS7SLi2gQGN8yVmsQ, nodes = [172.21.0.1:33403 (id: 1003 rack: null), 172.21.0.1:33404 (id: 1002 rack: null), 172.21.0.1:33402 (id: 1001 rack: null)], partitions = [Partition(topic = test-topic, partition = 0, leader = 1003, replicas = [1003,1002], isr = [1003,1002])]) (org.apache.kafka.clients.Metadata)
+Sat Aug  5 11:31:20 UTC 2017
+Sat Aug  5 11:31:20 UTC 2017
+[2017-08-05 11:31:21,409] DEBUG Initiating connection to node 1003 at 172.21.0.1:33403. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:21,410] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node 1003 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:21,410] DEBUG Completed connection to node 1003.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:21,410] DEBUG Initiating API versions fetch from node 1003. (org.apache.kafka.clients.NetworkClient)
+Sat Aug  5 11:31:21 UTC 2017
+Sat Aug  5 11:31:21 UTC 2017
+Sat Aug  5 11:31:22 UTC 2017
+[2017-08-05 11:31:22,913] DEBUG Disconnecting from node 1003 due to request timeout. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:22,913] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
 org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[2017-08-05 11:31:22,913] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
 org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[2017-08-05 11:31:22,913] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
 org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[2017-08-05 11:31:22,914] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
 org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
-[2017-08-04 14:25:06,758] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+[2017-08-05 11:31:22,914] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
 org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1506 ms has passed since batch creation plus linger time
-Fri Aug  4 14:25:06 UTC 2017
-Fri Aug  4 14:25:07 UTC 2017
-Fri Aug  4 14:25:07 UTC 2017
-Fri Aug  4 14:25:08 UTC 2017
-Fri Aug  4 14:25:08 UTC 2017
-Fri Aug  4 14:25:09 UTC 2017
-Fri Aug  4 14:25:09 UTC 2017
-Fri Aug  4 14:25:10 UTC 2017
-Fri Aug  4 14:25:10 UTC 2017
-Fri Aug  4 14:25:11 UTC 2017
-Fri Aug  4 14:25:11 UTC 2017
-Fri Aug  4 14:25:12 UTC 2017
-Fri Aug  4 14:25:12 UTC 2017
-Fri Aug  4 14:25:13 UTC 2017
-Fri Aug  4 14:25:13 UTC 2017
-Fri Aug  4 14:25:14 UTC 2017
-Fri Aug  4 14:25:14 UTC 2017
-Fri Aug  4 14:25:15 UTC 2017
-Fri Aug  4 14:25:15 UTC 2017
-Fri Aug  4 14:25:16 UTC 2017
-Fri Aug  4 14:25:16 UTC 2017
-Fri Aug  4 14:25:17 UTC 2017
-Fri Aug  4 14:25:17 UTC 2017
-Fri Aug  4 14:25:18 UTC 2017
-Fri Aug  4 14:25:18 UTC 2017
-Fri Aug  4 14:25:19 UTC 2017
-Fri Aug  4 14:25:19 UTC 2017
-Fri Aug  4 14:25:20 UTC 2017
-Fri Aug  4 14:25:20 UTC 2017
-Fri Aug  4 14:25:21 UTC 2017
-Fri Aug  4 14:25:21 UTC 2017
-Fri Aug  4 14:25:22 UTC 2017
-Fri Aug  4 14:25:22 UTC 2017
-Fri Aug  4 14:25:23 UTC 2017
-Fri Aug  4 14:25:23 UTC 2017
-Fri Aug  4 14:25:24 UTC 2017
-Fri Aug  4 14:25:24 UTC 2017
-Fri Aug  4 14:25:25 UTC 2017
-Fri Aug  4 14:25:25 UTC 2017
-Fri Aug  4 14:25:26 UTC 2017
-Fri Aug  4 14:25:26 UTC 2017
-Fri Aug  4 14:25:27 UTC 2017
-Fri Aug  4 14:25:27 UTC 2017
-Fri Aug  4 14:25:28 UTC 2017
-Fri Aug  4 14:25:28 UTC 2017
-Fri Aug  4 14:25:29 UTC 2017
-Fri Aug  4 14:25:29 UTC 2017
-Fri Aug  4 14:25:30 UTC 2017
-Fri Aug  4 14:25:30 UTC 2017
-Fri Aug  4 14:25:31 UTC 2017
-Fri Aug  4 14:25:31 UTC 2017
-Fri Aug  4 14:25:32 UTC 2017
-Fri Aug  4 14:25:32 UTC 2017
-Fri Aug  4 14:25:33 UTC 2017
-Fri Aug  4 14:25:33 UTC 2017
-Fri Aug  4 14:25:34 UTC 2017
-Fri Aug  4 14:25:34 UTC 2017
-Fri Aug  4 14:25:35 UTC 2017
-Fri Aug  4 14:25:35 UTC 2017
-Fri Aug  4 14:25:36 UTC 2017
-Fri Aug  4 14:25:36 UTC 2017
-Fri Aug  4 14:25:37 UTC 2017
+[2017-08-05 11:31:22,914] DEBUG Sending metadata request (type=MetadataRequest, topics=test-topic) to node 1002 (org.apache.kafka.clients.NetworkClient)
+Sat Aug  5 11:31:22 UTC 2017
+[2017-08-05 11:31:22,918] DEBUG Updated cluster metadata version 6 to Cluster(id = 1fZRueS7SLi2gQGN8yVmsQ, nodes = [172.21.0.1:33402 (id: 1001 rack: null), 172.21.0.1:33403 (id: 1003 rack: null), 172.21.0.1:33404 (id: 1002 rack: null)], partitions = [Partition(topic = test-topic, partition = 0, leader = 1003, replicas = [1003,1002], isr = [1003,1002])]) (org.apache.kafka.clients.Metadata)
+Sat Aug  5 11:31:23 UTC 2017
+[2017-08-05 11:31:23,919] DEBUG Initiating connection to node 1003 at 172.21.0.1:33403. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:23,920] DEBUG Created socket with SO_RCVBUF = 32768, SO_SNDBUF = 102400, SO_TIMEOUT = 0 to node 1003 (org.apache.kafka.common.network.Selector)
+[2017-08-05 11:31:23,920] DEBUG Completed connection to node 1003.  Fetching API versions. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:23,920] DEBUG Initiating API versions fetch from node 1003. (org.apache.kafka.clients.NetworkClient)
+Sat Aug  5 11:31:23 UTC 2017
+Sat Aug  5 11:31:24 UTC 2017
+Sat Aug  5 11:31:24 UTC 2017
+[2017-08-05 11:31:25,423] DEBUG Disconnecting from node 1003 due to request timeout. (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:25,423] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:25,423] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:25,423] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:25,424] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:25,424] ERROR Error when sending message to topic test-topic with key: null, value: 28 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
+org.apache.kafka.common.errors.TimeoutException: Expiring 5 record(s) for test-topic-0: 1505 ms has passed since batch creation plus linger time
+[2017-08-05 11:31:25,424] DEBUG Sending metadata request (type=MetadataRequest, topics=test-topic) to node 1001 (org.apache.kafka.clients.NetworkClient)
+[2017-08-05 11:31:25,427] DEBUG Updated cluster metadata version 7 to Cluster(id = 1fZRueS7SLi2gQGN8yVmsQ, nodes = [172.21.0.1:33404 (id: 1002 rack: null), 172.21.0.1:33402 (id: 1001 rack: null)], partitions = [Partition(topic = test-topic, partition = 0, leader = 1002, replicas = [1003,1002], isr = [1002])]) (org.apache.kafka.clients.Metadata)
+Sat Aug  5 11:31:25 UTC 2017
+Sat Aug  5 11:31:25 UTC 2017
+Sat Aug  5 11:31:26 UTC 2017
+Sat Aug  5 11:31:26 UTC 2017
+Sat Aug  5 11:31:27 UTC 2017
+Sat Aug  5 11:31:27 UTC 2017
+Sat Aug  5 11:31:28 UTC 2017
+Sat Aug  5 11:31:28 UTC 2017
+Sat Aug  5 11:31:29 UTC 2017
+Sat Aug  5 11:31:29 UTC 2017
+Sat Aug  5 11:31:30 UTC 2017
+Sat Aug  5 11:31:30 UTC 2017
+Sat Aug  5 11:31:31 UTC 2017
+Sat Aug  5 11:31:31 UTC 2017
+Sat Aug  5 11:31:32 UTC 2017
+Sat Aug  5 11:31:32 UTC 2017
+Sat Aug  5 11:31:33 UTC 2017
+Sat Aug  5 11:31:33 UTC 2017
+Sat Aug  5 11:31:34 UTC 2017
+Sat Aug  5 11:31:34 UTC 2017
+Sat Aug  5 11:31:35 UTC 2017
+Sat Aug  5 11:31:35 UTC 2017
+Sat Aug  5 11:31:36 UTC 2017
+Sat Aug  5 11:31:37 UTC 2017
+Sat Aug  5 11:31:37 UTC 2017
+Sat Aug  5 11:31:38 UTC 2017
+Sat Aug  5 11:31:38 UTC 2017
+Sat Aug  5 11:31:39 UTC 2017
+Sat Aug  5 11:31:39 UTC 2017
+Sat Aug  5 11:31:40 UTC 2017
+Sat Aug  5 11:31:40 UTC 2017
+Sat Aug  5 11:31:41 UTC 2017
+Sat Aug  5 11:31:41 UTC 2017
+Sat Aug  5 11:31:42 UTC 2017
+Sat Aug  5 11:31:42 UTC 2017
+Sat Aug  5 11:31:43 UTC 2017
+Sat Aug  5 11:31:43 UTC 2017
+Sat Aug  5 11:31:44 UTC 2017
+Sat Aug  5 11:31:44 UTC 2017
+Sat Aug  5 11:31:45 UTC 2017
+Sat Aug  5 11:31:45 UTC 2017
+Sat Aug  5 11:31:46 UTC 2017
+Sat Aug  5 11:31:46 UTC 2017
+Sat Aug  5 11:31:47 UTC 2017
+Sat Aug  5 11:31:47 UTC 2017
+Sat Aug  5 11:31:48 UTC 2017
+Sat Aug  5 11:31:48 UTC 2017
+Sat Aug  5 11:31:49 UTC 2017
+Sat Aug  5 11:31:49 UTC 2017
+Sat Aug  5 11:31:50 UTC 2017
+Sat Aug  5 11:31:50 UTC 2017
+Sat Aug  5 11:31:51 UTC 2017
+Sat Aug  5 11:31:51 UTC 2017
+Sat Aug  5 11:31:52 UTC 2017
+Sat Aug  5 11:31:52 UTC 2017
+Sat Aug  5 11:31:53 UTC 2017
+Sat Aug  5 11:31:53 UTC 2017
+Sat Aug  5 11:31:54 UTC 2017
+Sat Aug  5 11:31:54 UTC 2017
+Sat Aug  5 11:31:55 UTC 2017
+Sat Aug  5 11:31:55 UTC 2017
+Sat Aug  5 11:31:56 UTC 2017
+Sat Aug  5 11:31:56 UTC 2017
+Sat Aug  5 11:31:57 UTC 2017
+Sat Aug  5 11:31:57 UTC 2017
+Sat Aug  5 11:31:58 UTC 2017
+Sat Aug  5 11:31:58 UTC 2017
+Sat Aug  5 11:31:59 UTC 2017
+Sat Aug  5 11:31:59 UTC 2017
+Sat Aug  5 11:32:00 UTC 2017
+Sat Aug  5 11:32:00 UTC 2017
+Sat Aug  5 11:32:01 UTC 2017
+Sat Aug  5 11:32:01 UTC 2017
+Sat Aug  5 11:32:02 UTC 2017
+Sat Aug  5 11:32:02 UTC 2017
+Sat Aug  5 11:32:03 UTC 2017
+Sat Aug  5 11:32:03 UTC 2017
+Sat Aug  5 11:32:04 UTC 2017
+Sat Aug  5 11:32:04 UTC 2017
+Sat Aug  5 11:32:05 UTC 2017
+Sat Aug  5 11:32:05 UTC 2017
+Sat Aug  5 11:32:06 UTC 2017
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 

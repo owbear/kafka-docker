@@ -1,0 +1,165 @@
+2017-08-06 09:28:57,620 ### Running test_producing_to_lost_leader_using_java_producer_and_kill
+2017-08-06 09:28:57,621 # Remove all docker containers for a clean start
+2017-08-06 09:28:58,439 # Start zookeeper and 3 kafka instances
+2017-08-06 09:29:00,222 Creating kafkanetworkfailuretests_zookeeper_1
+2017-08-06 09:29:00,222 Creating kafkanetworkfailuretests_kafka_1
+2017-08-06 09:29:00,222 Creating kafkanetworkfailuretests_kafka_2
+2017-08-06 09:29:00,222 Creating kafkanetworkfailuretests_kafka_3
+2017-08-06 09:29:00,223 # Wait for the cluster to start
+2017-08-06 09:29:13,568 {'controller_epoch': 1, 'isr': [1001, 1003], 'leader': 1001, 'leader_epoch': 0, 'version': 1}
+2017-08-06 09:29:14,747 # Kafka cluster has controller 1001 (d24149732162)
+2017-08-06 09:29:17,086 # Topic test-topic has 1001 (d24149732162) as leader and 1003 (153affd52f7e) as in sync replica
+2017-08-06 09:29:17,086 # Note that the leader is also controller in this cluster (affects fail-over)
+2017-08-06 09:29:17,086 # Start a producer and let it run for a while
+2017-08-06 09:29:17,993 kafkanetworkfailuretests_zookeeper_1 is up-to-date
+2017-08-06 09:29:17,994 kafkanetworkfailuretests_kafka_1 is up-to-date
+2017-08-06 09:29:17,994 kafkanetworkfailuretests_kafka_2 is up-to-date
+2017-08-06 09:29:17,994 kafkanetworkfailuretests_kafka_3 is up-to-date
+2017-08-06 09:29:17,994 Creating kafkanetworkfailuretests_producer_java_1
+2017-08-06 09:29:27,999 # Disable the leader on 1001
+2017-08-06 09:29:27,999 ## Kill -9 d24149732162
+2017-08-06 09:29:28,237 # Sleep for a while with the leader disconnected before checking what the producer has produced
+2017-08-06 09:29:28,821 {'controller_epoch': 1, 'isr': [1001, 1003], 'leader': 1001, 'leader_epoch': 0, 'version': 1}
+2017-08-06 09:29:31,401 {'controller_epoch': 1, 'isr': [1001, 1003], 'leader': 1001, 'leader_epoch': 0, 'version': 1}
+2017-08-06 09:29:33,979 {'controller_epoch': 1, 'isr': [1001, 1003], 'leader': 1001, 'leader_epoch': 0, 'version': 1}
+2017-08-06 09:29:36,569 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:39,155 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:41,735 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:44,312 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:46,894 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:49,482 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:52,070 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:54,662 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:57,247 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:29:59,831 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:02,423 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:05,019 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:07,609 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:10,190 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:12,779 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:15,366 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:17,956 {'controller_epoch': 2, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
+2017-08-06 09:30:19,960 # Stop the producer
+2017-08-06 09:30:21,702 # Start the consumer
+2017-08-06 09:30:22,922 kafkanetworkfailuretests_zookeeper_1 is up-to-date
+2017-08-06 09:30:22,923 Creating kafkanetworkfailuretests_kafka_3
+2017-08-06 09:30:22,923 Creating kafkanetworkfailuretests_consumer_java_1
+2017-08-06 09:30:22,923 # Wait for 10 seconds for the consumer to consume
+2017-08-06 09:30:48,217 # Stop the consumer
+2017-08-06 09:30:59,001 # Logs of what the consumer consumed:
+Sun Aug 6 09:30:22 UTC 2017 Starting java consumer
+[2017-08-06 09:30:24,805] WARN Connection to node -3 could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2017-08-06 09:30:24,813] WARN Connection to node -3 could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+Sun Aug 6 09:29:18 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:18 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:19 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:19 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:20 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:20 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:21 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:21 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:22 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:22 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:23 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:23 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:24 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:25 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:25 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:26 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:26 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:27 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:33 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:34 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:34 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:35 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:35 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:36 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:36 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:37 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:37 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:38 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:38 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:39 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:39 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:40 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:40 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:41 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:41 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:42 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:42 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:43 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:43 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:44 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:44 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:45 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:45 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:46 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:46 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:47 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:47 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:48 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:48 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:49 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:49 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:50 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:50 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:51 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:51 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:52 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:52 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:53 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:53 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:54 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:54 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:55 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:55 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:56 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:56 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:57 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:57 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:58 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:58 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:59 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:29:59 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:00 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:00 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:01 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:01 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:02 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:02 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:03 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:03 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:04 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:04 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:05 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:05 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:06 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:06 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:07 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:07 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:08 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:08 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:09 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:09 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:10 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:10 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:11 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:11 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:12 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:12 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:13 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:13 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:14 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:14 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:15 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:15 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:16 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:16 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:17 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:17 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:18 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:18 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:19 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:19 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+Sun Aug 6 09:30:20 UTC 2017 [received Sun Aug 6 09:30:27 UTC 2017]
+

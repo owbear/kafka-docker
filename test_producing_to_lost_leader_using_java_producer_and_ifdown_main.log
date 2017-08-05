@@ -1,131 +1,151 @@
-2017-08-04 14:24:13,109 ### Running test_producing_to_lost_leader_using_java_producer_and_ifdown
-2017-08-04 14:24:13,109 # Remove all docker containers for a clean start
-2017-08-04 14:24:14,246 # Start zookeeper and 3 kafka instances
-2017-08-04 14:24:16,140 Creating kafkanetworkfailuretests_zookeeper_1
-2017-08-04 14:24:16,140 Creating kafkanetworkfailuretests_kafka_1
-2017-08-04 14:24:16,140 Creating kafkanetworkfailuretests_kafka_2
-2017-08-04 14:24:16,141 Creating kafkanetworkfailuretests_kafka_3
-2017-08-04 14:24:16,141 # Wait for the cluster to start
-2017-08-04 14:24:29,675 {'controller_epoch': 1, 'isr': [1002, 1003], 'leader': 1002, 'leader_epoch': 0, 'version': 1}
-2017-08-04 14:24:30,874 # Kafka cluster has controller 1001 (5e2be03e2492)
-2017-08-04 14:24:33,248 # Topic test-topic has 1002 (728af92dc3e1) as leader and 1003 (a3c8f1b20bdd) as in sync replica
-2017-08-04 14:24:33,248 # Start a producer and let it run for a while
-2017-08-04 14:24:34,150 kafkanetworkfailuretests_zookeeper_1 is up-to-date
-2017-08-04 14:24:34,150 kafkanetworkfailuretests_kafka_1 is up-to-date
-2017-08-04 14:24:34,150 kafkanetworkfailuretests_kafka_2 is up-to-date
-2017-08-04 14:24:34,150 kafkanetworkfailuretests_kafka_3 is up-to-date
-2017-08-04 14:24:34,150 Creating kafkanetworkfailuretests_producer_java_1
-2017-08-04 14:24:44,161 # Disable the leader on 1002
-2017-08-04 14:24:44,161 ## Bring down eth0 on 728af92dc3e1
-2017-08-04 14:24:44,207 # Sleep for a while with the leader disconnected before checking what the producer has produced
-2017-08-04 14:24:44,795 {'controller_epoch': 1, 'isr': [1002, 1003], 'leader': 1002, 'leader_epoch': 0, 'version': 1}
-2017-08-04 14:24:47,422 {'controller_epoch': 1, 'isr': [1002, 1003], 'leader': 1002, 'leader_epoch': 0, 'version': 1}
-2017-08-04 14:24:50,008 {'controller_epoch': 1, 'isr': [1002, 1003], 'leader': 1002, 'leader_epoch': 0, 'version': 1}
-2017-08-04 14:24:52,675 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:24:55,269 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:24:57,858 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:00,465 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:03,061 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:05,655 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:08,268 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:10,874 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:13,479 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:16,075 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:18,724 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:21,337 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:23,933 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:26,527 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:29,113 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:31,705 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:34,307 {'controller_epoch': 1, 'isr': [1003], 'leader': 1003, 'leader_epoch': 1, 'version': 1}
-2017-08-04 14:25:36,309 # Stop the producer
-2017-08-04 14:25:38,051 # Start the consumer
-2017-08-04 14:25:38,951 kafkanetworkfailuretests_zookeeper_1 is up-to-date
-2017-08-04 14:25:38,951 kafkanetworkfailuretests_kafka_1 is up-to-date
-2017-08-04 14:25:38,951 kafkanetworkfailuretests_kafka_2 is up-to-date
-2017-08-04 14:25:38,951 kafkanetworkfailuretests_kafka_3 is up-to-date
-2017-08-04 14:25:38,951 Creating kafkanetworkfailuretests_consumer_java_1
-2017-08-04 14:25:38,951 # Wait for 10 seconds for the consumer to consume
-2017-08-04 14:25:48,957 # Stop the consumer
-2017-08-04 14:26:00,095 # Logs of what the consumer consumed:
-Fri Aug 4 14:25:38 UTC 2017 Starting java consumer
-Fri Aug 4 14:24:34 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:35 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:35 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:36 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:36 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:37 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:37 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:38 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:38 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:39 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:39 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:40 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:40 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:41 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:41 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:42 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:42 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:24:43 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:06 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:07 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:07 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:08 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:08 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:09 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:09 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:10 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:10 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:11 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:11 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:12 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:12 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:13 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:13 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:14 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:14 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:15 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:15 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:16 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:16 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:17 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:17 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:18 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:18 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:19 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:19 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:20 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:20 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:21 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:21 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:22 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:22 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:23 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:23 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:24 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:24 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:25 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:25 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:26 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:26 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:27 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:27 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:28 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:28 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:29 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:29 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:30 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:30 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:31 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:31 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:32 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:32 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:33 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:33 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:34 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:34 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:35 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:35 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-Fri Aug 4 14:25:36 UTC 2017 [received Fri Aug 4 14:25:41 UTC 2017]
-[2017-08-04 14:25:42,872] WARN Connection to node -3 could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+2017-08-05 11:30:42,228 ### Running test_producing_to_lost_leader_using_java_producer_and_ifdown
+2017-08-05 11:30:42,228 # Remove all docker containers for a clean start
+2017-08-05 11:30:43,057 # Start zookeeper and 3 kafka instances
+2017-08-05 11:30:44,837 Creating kafkanetworkfailuretests_zookeeper_1
+2017-08-05 11:30:44,837 Creating kafkanetworkfailuretests_kafka_1
+2017-08-05 11:30:44,837 Creating kafkanetworkfailuretests_kafka_2
+2017-08-05 11:30:44,837 Creating kafkanetworkfailuretests_kafka_3
+2017-08-05 11:30:44,837 # Wait for the cluster to start
+2017-08-05 11:30:58,382 {'controller_epoch': 1, 'isr': [1003, 1002], 'leader': 1003, 'leader_epoch': 0, 'version': 1}
+2017-08-05 11:30:59,558 # Kafka cluster has controller 1001 (7a77cd825d53)
+2017-08-05 11:31:01,963 # Topic test-topic has 1003 (c1793eef6cbd) as leader and 1002 (916674e8ec49) as in sync replica
+2017-08-05 11:31:01,963 # Start a producer and let it run for a while
+2017-08-05 11:31:02,852 kafkanetworkfailuretests_zookeeper_1 is up-to-date
+2017-08-05 11:31:02,852 kafkanetworkfailuretests_kafka_1 is up-to-date
+2017-08-05 11:31:02,852 kafkanetworkfailuretests_kafka_2 is up-to-date
+2017-08-05 11:31:02,852 kafkanetworkfailuretests_kafka_3 is up-to-date
+2017-08-05 11:31:02,852 Creating kafkanetworkfailuretests_producer_java_1
+2017-08-05 11:31:12,861 # Disable the leader on 1003
+2017-08-05 11:31:12,861 ## Bring down eth0 on c1793eef6cbd
+2017-08-05 11:31:12,912 # Sleep for a while with the leader disconnected before checking what the producer has produced
+2017-08-05 11:31:13,505 {'controller_epoch': 1, 'isr': [1003, 1002], 'leader': 1003, 'leader_epoch': 0, 'version': 1}
+2017-08-05 11:31:16,102 {'controller_epoch': 1, 'isr': [1003, 1002], 'leader': 1003, 'leader_epoch': 0, 'version': 1}
+2017-08-05 11:31:18,752 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:21,343 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:23,933 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:26,518 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:29,100 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:31,690 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:34,275 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:36,866 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:39,470 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:42,067 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:44,661 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:47,242 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:49,837 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:52,408 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:55,006 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:31:57,600 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:32:00,187 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:32:02,766 {'controller_epoch': 1, 'isr': [1002], 'leader': 1002, 'leader_epoch': 1, 'version': 1}
+2017-08-05 11:32:04,767 # Stop the producer
+2017-08-05 11:32:06,488 # Start the consumer
+2017-08-05 11:32:07,381 kafkanetworkfailuretests_zookeeper_1 is up-to-date
+2017-08-05 11:32:07,381 kafkanetworkfailuretests_kafka_1 is up-to-date
+2017-08-05 11:32:07,381 kafkanetworkfailuretests_kafka_2 is up-to-date
+2017-08-05 11:32:07,381 kafkanetworkfailuretests_kafka_3 is up-to-date
+2017-08-05 11:32:07,381 Creating kafkanetworkfailuretests_consumer_java_1
+2017-08-05 11:32:07,382 # Wait for 10 seconds for the consumer to consume
+2017-08-05 11:32:17,392 # Stop the consumer
+2017-08-05 11:32:28,129 # Logs of what the consumer consumed:
+Sat Aug 5 11:32:07 UTC 2017 Starting java consumer
+Sat Aug 5 11:31:03 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:03 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:04 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:04 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:05 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:05 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:06 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:06 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:07 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:07 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:08 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:08 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:09 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:09 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:10 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:10 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:11 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:11 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:25 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:25 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:26 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:26 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:27 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:27 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:28 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:28 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:29 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:29 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:30 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:30 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:31 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:31 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:32 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:32 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:33 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:33 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:34 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:34 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:35 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:35 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:36 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:37 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:37 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:38 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:38 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:39 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:39 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:40 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:40 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:41 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:41 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:42 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:42 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:43 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:43 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:44 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:44 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:45 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:45 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:46 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:46 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:47 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:47 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:48 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:48 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:49 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:49 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:50 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:50 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:51 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:51 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:52 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:52 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:53 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:53 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:54 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:54 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:55 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:55 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:56 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:56 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:57 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:57 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:58 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:58 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:59 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:31:59 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:00 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:00 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:01 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:01 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:02 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:02 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:03 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:03 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:04 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:04 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+Sat Aug 5 11:32:05 UTC 2017 [received Sat Aug 5 11:32:09 UTC 2017]
+[2017-08-05 11:32:11,305] WARN Connection to node -1 could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
 

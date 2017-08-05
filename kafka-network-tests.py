@@ -189,4 +189,4 @@ def test_producing_to_lost_leader_using_librdkafka_producer_and_kill():
 
 if __name__ == '__main__':
     test_producing_to_lost_leader_using_java_producer_and_ifdown()
-    test_producing_to_lost_leader_using_librdkafka_producer_and_ifdown()
+    test_producing_to_lost_leader_using_java_producer_and_kill()
